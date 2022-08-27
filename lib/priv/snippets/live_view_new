@@ -1,0 +1,14 @@
+defmodule $1 do
+  use $2, :live_view
+
+  def render(assigns) do
+    ~H"""
+    $0
+    """
+  end
+
+  def mount(${3: params}, ${4: session}, ${5: socket}) do
+    $6
+    {:ok, socket}
+  end
+end

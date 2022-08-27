@@ -1,0 +1,5 @@
+def ${1:component}(${2:assigns}) do
+  ~H"""
+  $3
+  """
+end

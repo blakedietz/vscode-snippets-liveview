@@ -1,0 +1,9 @@
+def changeset(${1:name}, attrs) do
+  required_attrs = [$2]
+  optional_attrs = [$3]
+
+  ${1:name}
+  |> add_account_id()
+  |> cast(attrs, required_attrs ++ optional_attrs)
+  |> validate_required(required_attrs)
+end
