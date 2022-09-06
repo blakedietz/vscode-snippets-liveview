@@ -15,6 +15,20 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("ecto_optional_attrs") do
+    %Snippet{
+      name: "Ecto: Changeset optional attrs",
+      prefix: ["eoa", "optional"]
+    }
+  end
+
+  def generate("ecto_required_attrs") do
+    %Snippet{
+      name: "Ecto: Changeset required attrs",
+      prefix: ["era", "req", "required"]
+    }
+  end
+
   def generate("ecto_context_update") do
     %Snippet{
       name: "Ecto: Context update",
