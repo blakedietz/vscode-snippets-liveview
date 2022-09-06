@@ -1,0 +1,3 @@
+def update(${1:assigns}, ${2:socket}) do
+  $0
+end

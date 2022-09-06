@@ -120,6 +120,27 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("live_component_call") do
+    %Snippet{
+      name: "LiveView: live_component call",
+      prefix: ["lvlc", "<.live_"]
+    }
+  end
+
+  def generate("live_component_handle_event") do
+    %Snippet{
+      name: "LiveView: live_component handle_event",
+      prefix: ["lvlc", "lvlche"]
+    }
+  end
+
+  def generate("live_component_update") do
+    %Snippet{
+      name: "LiveView: live_component update",
+      prefix: ["lvlc", "lvlcu"]
+    }
+  end
+
   def generate("phoenix_component_definition") do
     %Snippet{
       name: "Phoenix: Commponent definition",

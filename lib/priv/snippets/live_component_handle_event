@@ -1,0 +1,3 @@
+def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
+  $0
+end
