@@ -8,20 +8,6 @@ defmodule App.Snippets do
     }
   end
 
-  def generate("ecto_context_create") do
-    %Snippet{
-      name: "Ecto: Context create",
-      prefix: ["ec", "eccreate"]
-    }
-  end
-
-  def generate("ecto_context_change") do
-    %Snippet{
-      name: "Ecto: Context change",
-      prefix: ["defecc"]
-    }
-  end
-
   def generate("ecto_optional_attrs") do
     %Snippet{
       name: "Ecto: Changeset optional attrs",
@@ -33,13 +19,6 @@ defmodule App.Snippets do
     %Snippet{
       name: "Ecto: Changeset required attrs",
       prefix: ["era", "req", "required"]
-    }
-  end
-
-  def generate("ecto_context_update") do
-    %Snippet{
-      name: "Ecto: Context update",
-      prefix: ["defecu"]
     }
   end
 
@@ -68,6 +47,48 @@ defmodule App.Snippets do
     %Snippet{
       name: "LiveView: handle_info",
       prefix: ["lv", "lvhi", "def", "def handle_info"]
+    }
+  end
+
+  def generate("phoenix_context_create") do
+    %Snippet{
+      name: "Phoenix: Context create",
+      prefix: ["pc"]
+    }
+  end
+
+  def generate("phoenix_context_change") do
+    %Snippet{
+      name: "Phoenix: Context change",
+      prefix: ["pc"]
+    }
+  end
+
+  def generate("phoenix_context_update") do
+    %Snippet{
+      name: "Phoenix: Context update",
+      prefix: ["pc"]
+    }
+  end
+
+  def generate("phoenix_context_delete") do
+    %Snippet{
+      name: "Phoenix: Context delete",
+      prefix: ["pc"]
+    }
+  end
+
+  def generate("phoenix_context_get") do
+    %Snippet{
+      name: "Phoenix: Context get",
+      prefix: ["pc"]
+    }
+  end
+
+  def generate("phoenix_context_list") do
+    %Snippet{
+      name: "Phoenix: Context list",
+      prefix: ["pc"]
     }
   end
 

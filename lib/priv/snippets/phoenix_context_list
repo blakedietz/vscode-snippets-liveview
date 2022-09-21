@@ -1,0 +1,12 @@
+@doc """
+Returns the list of $1s.
+
+## Examples
+
+    iex> list_$1()
+    [%${1/(.*)/${1:/pascalcase}/}{}, ...]
+
+"""
+def list_${1:name}s do
+  Repo.all(${1/(.*)/${1:/pascalcase}/})
+end

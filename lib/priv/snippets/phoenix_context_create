@@ -1,0 +1,17 @@
+@doc """
+Creates a $1.
+
+## Examples
+
+    iex> create_$1(%{field: value})
+    {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+    iex> create_$1(%{field: bad_value})
+    {:error, ...}
+
+"""
+def create_${1:name}(attrs \\\\ %{}) do
+  %${1/(.*)/${1:/pascalcase}/}{}
+  |> ${1/(.*)/${1:/pascalcase}/}.changeset(attrs)
+  |> Repo.insert()
+end

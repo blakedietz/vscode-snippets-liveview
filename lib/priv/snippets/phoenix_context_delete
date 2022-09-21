@@ -1,0 +1,14 @@
+@doc """
+  Deletes a $1.
+
+  ## Examples
+
+      iex> delete_$1($1)
+      {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+      iex> delete_$1($1)
+      {:error, %Ecto.Changeset{}}
+"""
+def delete_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1) do
+  Repo.delete($1)
+end

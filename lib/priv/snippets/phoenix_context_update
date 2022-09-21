@@ -1,0 +1,17 @@
+@doc """
+Updates a $1.
+
+## Examples
+
+    iex> update_$1(%{field: value})
+    {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+    iex> update_$1(%{field: bad_value})
+    {:error, %Ecto.Chnageset{}}
+
+"""
+def update_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs) do
+  $1
+  |> ${1/(.*)/${1:/pascalcase}/}.changeset(attrs)
+  |> Repo.update()
+end

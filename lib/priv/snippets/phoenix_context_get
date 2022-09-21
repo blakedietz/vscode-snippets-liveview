@@ -1,0 +1,15 @@
+@doc """
+Gets a single $1.
+
+## Examples
+
+    iex> get_$1!(123)
+    %${1/(.*)/${1:/pascalcase}/}{}
+
+    iex> get_$1!(456)
+    ** (Ecto.NoResultsError)
+
+"""
+def get_${1:name}!(id) do
+  Repo.get!(${1/(.*)/${1:/pascalcase}/}, id)
+end

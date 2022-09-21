@@ -1,0 +1,12 @@
+@doc """
+Returns an `%Ecto.Changeset{}` for tracking $1 changes.
+
+## Examples
+
+    iex> change_$1(%{field: value})
+    %Ecto.Changeset{data: %${1/(.*)/${1:/pascalcase}/}{}}
+
+"""
+def change_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs \\\\ %{} ) do
+  ${1/(.*)/${1:/pascalcase}/}.changeset($1, attrs)
+end

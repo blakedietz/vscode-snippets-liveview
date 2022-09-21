@@ -1,3 +1,0 @@
-def change_${1:name}(%${2:struct}{} = $3, attrs \\\\\\\\ %{}) do
-  ${3} |> $4(attrs)
-end
