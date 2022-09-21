@@ -8,6 +8,13 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("ecto_context_create") do
+    %Snippet{
+      name: "Ecto: Context create",
+      prefix: ["ec", "eccreate"]
+    }
+  end
+
   def generate("ecto_context_change") do
     %Snippet{
       name: "Ecto: Context change",
@@ -57,6 +64,13 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("live_view_handle_info") do
+    %Snippet{
+      name: "LiveView: handle_info",
+      prefix: ["lv", "lvhi", "def", "def handle_info"]
+    }
+  end
+
   def generate("eex_return_contents_inside") do
     %Snippet{
       name: "eex: Return contents",
@@ -102,42 +116,63 @@ defmodule App.Snippets do
   def generate("live_view_new") do
     %Snippet{
       name: "LiveView: new LiveView module",
-      prefix: ["defmlv"]
+      prefix: ["lv", "defmlv"]
     }
   end
 
   def generate("live_view_render") do
     %Snippet{
       name: "LiveView: render",
-      prefix: ["lvr", "deflvr"]
+      prefix: ["lv", "lvr", "deflvr"]
     }
   end
 
   def generate("live_view_socket_destructure") do
     %Snippet{
       name: "LiveView: socket destructure",
-      prefix: ["lvsd"]
+      prefix: ["lv", "lvsd"]
+    }
+  end
+
+  def generate("live_view_impl") do
+    %Snippet{
+      name: "LiveView: @impl Phoenix.LiveView",
+      prefix: ["lv", "lvimpl", "@impl"]
     }
   end
 
   def generate("live_component_call") do
     %Snippet{
-      name: "LiveView: live_component call",
-      prefix: ["lvlc", "<.live_"]
+      name: "LiveView: Phoenix.LiveComponent call",
+      prefix: ["lv", "lvlc", "<.live_"]
+    }
+  end
+
+  def generate("live_component_impl") do
+    %Snippet{
+      name: "LiveView: @impl Phoenix.LiveComponent",
+      prefix: ["lvlc", "lc", "@impl"]
     }
   end
 
   def generate("live_component_handle_event") do
     %Snippet{
-      name: "LiveView: live_component handle_event",
+      name: "LiveView: Phoenix.LiveComponent handle_event",
       prefix: ["lvlc", "lvlche"]
     }
   end
 
   def generate("live_component_update") do
     %Snippet{
-      name: "LiveView: live_component update",
+      name: "LiveView: Phoenix.LiveComponent update",
       prefix: ["lvlc", "lvlcu"]
+    }
+  end
+
+  def generate("live_component_assign_helper") do
+    %Snippet{
+      name: "LiveView: Phoenix.LiveComponent assign_helper",
+      prefix: ["lv", "lvlc"]
     }
   end
 

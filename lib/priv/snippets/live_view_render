@@ -1,3 +1,4 @@
+@impl Phoenix.LiveView
 def render(${1:assigns}) do
   ~H"""
   $0

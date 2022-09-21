@@ -1,5 +1,5 @@
 defmodule App.Snippets.Snippet do
-  defstruct name: "", scope: "elixir", prefix: [""], body: [""]
+  defstruct name: "", scope: "elixir,phoenix-heex,html", prefix: [""], body: [""]
 
   defimpl Jason.Encoder, for: App.Snippets.Snippet do
     def encode(value, opts) do

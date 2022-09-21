@@ -1,3 +1,6 @@
+@impl Phoenix.LiveComponent
 def update(${1:assigns}, ${2:socket}) do
   $0
+
+  {:ok, socket}
 end
