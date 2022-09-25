@@ -1,0 +1,8 @@
+<.form
+  for={${1:@changeset}}
+  let={${2:form}}
+  phx-change="${3:validate}"
+  phx-submit="${4:submit}"
+>
+  $0
+</.form>
