@@ -1,0 +1,5 @@
+@impl Phoenix.LiveComponent
+def preload(${1:list_of_assigns}) do
+  $0
+  $1
+end

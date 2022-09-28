@@ -169,6 +169,13 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("live_component_handle_event") do
+    %Snippet{
+      name: "LiveView: Phoenix.LiveComponent handle_event",
+      prefix: ["plvs", "plc", "plche"]
+    }
+  end
+
   def generate("live_component_impl") do
     %Snippet{
       name: "LiveView: @impl Phoenix.LiveComponent",
@@ -176,10 +183,24 @@ defmodule App.Snippets do
     }
   end
 
-  def generate("live_component_handle_event") do
+  def generate("live_component_mount") do
     %Snippet{
-      name: "LiveView: Phoenix.LiveComponent handle_event",
-      prefix: ["plvs", "plc", "plche"]
+      name: "LiveView: Phoenix.LiveComponent mount",
+      prefix: ["plvs", "plc", "plcm"]
+    }
+  end
+
+  def generate("live_component_preload") do
+    %Snippet{
+      name: "LiveView: Phoenix.LiveComponent preload",
+      prefix: ["plvs", "plc", "plcp"]
+    }
+  end
+
+  def generate("live_component_render") do
+    %Snippet{
+      name: "LiveView: Phoenix.LiveComponent render",
+      prefix: ["plvs", "plc", "plcr"]
     }
   end
 
@@ -193,7 +214,7 @@ defmodule App.Snippets do
   def generate("live_component_assign_helper") do
     %Snippet{
       name: "LiveView: Phoenix.LiveComponent assign helper",
-      prefix: ["plvs", "plc", "plca"]
+      prefix: ["plvs", "plc", "plca", "plcah"]
     }
   end
 

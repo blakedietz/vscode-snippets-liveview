@@ -33,35 +33,39 @@ teach yourself which snippet mnemonics you would prefer to use.
 
 ## Snippet list
 
-| Name                                          | Prefix                   |
-| --------------------------------------------- | ------------------------ |
-| Ecto: Schema changeset                        | plvs,es,esc              |
-| Ecto: Schema changeset optional attrs         | plvs,es,esoa             |
-| Ecto: Schema changeset required attrs         | plvs,es,escra            |
-| LiveView: @impl Phoenix.LiveComponent         | plvs,plv,@impl           |
-| LiveView: @impl Phoenix.LiveView              | plvs,plv,@impl           |
-| LiveView: New LiveView module                 | plvs,plv,plvnlvm         |
-| LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca            |
-| LiveView: Phoenix.LiveComponent call          | plvs,plc,plcc            |
-| LiveView: Phoenix.LiveComponent handle_event  | plvs,plc,plche           |
-| LiveView: Phoenix.LiveComponent update        | plvs,plc,plcu            |
-| LiveView: Render slot                         | plvs,plvrs               |
-| LiveView: handle_info                         | plvs,plv,plvhi           |
-| LiveView: render implementation               | plvs,plv,plvr            |
-| LiveView: socket destructure                  | plvs,plv,plvsd           |
-| Phoenix: Component definition                 | plvs,pc,pcd              |
-| Phoenix: Context change                       | plvs,pctx,pctxch         |
-| Phoenix: Context create                       | plvs,pctx,pctxcr         |
-| Phoenix: Context delete                       | plvs,pctx,pctxd          |
-| Phoenix: Context get                          | plvs,pctx,pctxg          |
-| Phoenix: Context list                         | plvs,pctx,pctxl          |
-| Phoenix: Context update                       | plvs,pctx,pctxu          |
-| Phoenix: Phoenix.Component.form/1             | plvs,pc,pcf              |
-| eex: Comment                                  | plvs,eex,eexc,<%#        |
-| eex: Replace with result                      | plvs,eex,<%=             |
-| eex: Return contents                          | plvs,eex,eexr,<%%        |
-| eex: case                                     | plvs,eex,eexcase,<% case |
-| eex: cond                                     | plvs,eex,eexcond,<% cond |
-| eex: for                                      | plvs,eex,eexfor,<% for   |
-| eex: if                                       | plvs,eex,eexif,<% if     |
-| eex: inline with output                       | plvs,eex,<%              |
+| Name | Prefix |
+| ---- | ------ |
+| Ecto: Schema changeset | plvs,es,esc |
+| Ecto: Schema changeset optional attrs | plvs,es,esoa |
+| Ecto: Schema changeset required attrs | plvs,es,escra |
+| LiveView: @impl Phoenix.LiveComponent | plvs,plv,@impl |
+| LiveView: @impl Phoenix.LiveView | plvs,plv,@impl |
+| LiveView: New LiveView module | plvs,plv,plvnlvm |
+| LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca,plcah |
+| LiveView: Phoenix.LiveComponent call | plvs,plc,plcc |
+| LiveView: Phoenix.LiveComponent handle_event | plvs,plc,plche |
+| LiveView: Phoenix.LiveComponent mount | plvs,plc,plcm |
+| LiveView: Phoenix.LiveComponent preload | plvs,plc,plcp |
+| LiveView: Phoenix.LiveComponent render | plvs,plc,plcr |
+| LiveView: Phoenix.LiveComponent update | plvs,plc,plcu |
+| LiveView: Render slot | plvs,plvrs |
+| LiveView: handle_info | plvs,plv,plvhi |
+| LiveView: render implementation | plvs,plv,plvr |
+| LiveView: socket destructure | plvs,plv,plvsd |
+| Phoenix: Component definition | plvs,pc,pcd |
+| Phoenix: Context change | plvs,pctx,pctxch |
+| Phoenix: Context create | plvs,pctx,pctxcr |
+| Phoenix: Context delete | plvs,pctx,pctxd |
+| Phoenix: Context get | plvs,pctx,pctxg |
+| Phoenix: Context list | plvs,pctx,pctxl |
+| Phoenix: Context update | plvs,pctx,pctxu |
+| Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf |
+| eex: Comment | plvs,eex,eexc,<%# |
+| eex: Replace with result | plvs,eex,<%= |
+| eex: Return contents | plvs,eex,eexr,<%% |
+| eex: case | plvs,eex,eexcase,<% case |
+| eex: cond | plvs,eex,eexcond,<% cond |
+| eex: for | plvs,eex,eexfor,<% for |
+| eex: if | plvs,eex,eexif,<% if |
+| eex: inline with output | plvs,eex,<% |
+
