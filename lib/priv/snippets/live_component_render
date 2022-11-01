@@ -1,5 +1,5 @@
 @impl Phoenix.LiveComponent
-def render(${$1:assigns}) do
+def render(${1:assigns}) do
   """H
   $0
   """
