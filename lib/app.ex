@@ -6,10 +6,12 @@ defmodule App do
     snippet_json =
       paths
       |> Enum.map(fn path ->
-        snippet = File.read!(Path.absname(path, snippet_directory)) |> String.split("\n")
+        file = File.read!(Path.absname(path, snippet_directory))
+        snippet = file |> String.split("\n")
 
         App.Snippets.generate(path)
         |> Map.put(:body, snippet)
+        |> Map.put(:description, file)
       end)
       |> Map.new(fn %{name: name} = meta_data -> {name, Map.delete(meta_data, :name)} end)
       |> Jason.encode!()
