@@ -118,7 +118,7 @@ defmodule App do
 
   defp to_table_line(snippet) do
     """
-    | #{snippet.name} | #{snippet.prefix |> Enum.join(",")} | [Reference](###{snippet.name |> String.downcase() |> String.replace(" ", "-")}) |
+    | #{snippet.name} | #{snippet.prefix |> Enum.join(",")} | [Reference](##{snippet.name |> String.downcase() |> String.replace(":", "") |> String.replace(" ", "-")}) |
     """
   end
 end
