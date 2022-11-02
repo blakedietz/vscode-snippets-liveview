@@ -25,6 +25,17 @@ defmodule App do
       |> Enum.sort_by(& &1.name)
       |> Enum.map_join("", &to_table_line/1)
 
+    snippet_examples =
+      paths
+      |> Enum.map(fn path ->
+        snippet = File.read!(Path.absname(path, snippet_directory))
+
+        App.Snippets.generate(path)
+        |> Map.put(:body, snippet)
+      end)
+      |> Enum.sort_by(& &1.name)
+      |> Enum.map_join("", &to_snippet_documentation/1)
+
     docs = """
     # Phoenix LiveView snippets
 
@@ -59,11 +70,14 @@ defmodule App do
     This applies to all snippets. See the table below to get a better understanding. Worst case, you just type `plvs` for a while and
     teach yourself which snippet mnemonics you would prefer to use.
 
-    ## Snippet list
+    ## Snippet index
 
-    | Name | Prefix |
-    | ---- | ------ |
+    | Name | Prefix | Reference |
+    | ---- | ------ | --------- |
     #{doc_table}
+
+    # Snippets
+    #{snippet_examples}
     """
 
     File.write("./README.md", docs)
@@ -87,9 +101,24 @@ defmodule App do
     if opts[:upcase], do: String.upcase(word), else: word
   end
 
+  defp to_snippet_documentation(snippet) do
+    """
+    ## #{snippet.name}
+
+    ### Prefixes
+
+    <pre>#{snippet.prefix |> Enum.join(",")}</pre>
+
+    ### Template
+    <pre>
+    #{snippet.body}
+    </pre>
+    """
+  end
+
   defp to_table_line(snippet) do
     """
-    | #{snippet.name} | #{snippet.prefix |> Enum.join(",")} |
+    | #{snippet.name} | #{snippet.prefix |> Enum.join(",")} | [Reference](###{snippet.name |> String.downcase() |> String.replace(" ", "-")}) |
     """
   end
 end

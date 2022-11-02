@@ -31,41 +31,549 @@ You'll want to reach for `Phoenix.Component.form/1` this mnemonically translates
 This applies to all snippets. See the table below to get a better understanding. Worst case, you just type `plvs` for a while and
 teach yourself which snippet mnemonics you would prefer to use.
 
-## Snippet list
+## Snippet index
 
-| Name | Prefix |
-| ---- | ------ |
-| Ecto: Schema changeset | plvs,es,esc |
-| Ecto: Schema changeset optional attrs | plvs,es,esoa |
-| Ecto: Schema changeset required attrs | plvs,es,escra |
-| LiveView: @impl Phoenix.LiveComponent | plvs,plv,@impl |
-| LiveView: @impl Phoenix.LiveView | plvs,plv,@impl |
-| LiveView: New LiveView module | plvs,plv,plvnlvm |
-| LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca,plcah |
-| LiveView: Phoenix.LiveComponent call | plvs,plc,plcc |
-| LiveView: Phoenix.LiveComponent handle_event | plvs,plc,plche |
-| LiveView: Phoenix.LiveComponent mount | plvs,plc,plcm |
-| LiveView: Phoenix.LiveComponent preload | plvs,plc,plcp |
-| LiveView: Phoenix.LiveComponent render | plvs,plc,plcr |
-| LiveView: Phoenix.LiveComponent update | plvs,plc,plcu |
-| LiveView: Render slot | plvs,plvrs |
-| LiveView: handle_info | plvs,plv,plvhi |
-| LiveView: render implementation | plvs,plv,plvr |
-| LiveView: socket destructure | plvs,plv,plvsd |
-| Phoenix: Component definition | plvs,pc,pcd |
-| Phoenix: Context change | plvs,pctx,pctxch |
-| Phoenix: Context create | plvs,pctx,pctxcr |
-| Phoenix: Context delete | plvs,pctx,pctxd |
-| Phoenix: Context get | plvs,pctx,pctxg |
-| Phoenix: Context list | plvs,pctx,pctxl |
-| Phoenix: Context update | plvs,pctx,pctxu |
-| Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf |
-| eex: Comment | plvs,eex,eexc,<%# |
-| eex: Replace with result | plvs,eex,<%= |
-| eex: Return contents | plvs,eex,eexr,<%% |
-| eex: case | plvs,eex,eexcase,<% case |
-| eex: cond | plvs,eex,eexcond,<% cond |
-| eex: for | plvs,eex,eexfor,<% for |
-| eex: if | plvs,eex,eexif,<% if |
-| eex: inline with output | plvs,eex,<% |
+| Name | Prefix | Reference |
+| ---- | ------ | --------- |
+| Ecto: Schema changeset | plvs,es,esc | [Reference](##ecto:-schema-changeset) |
+| Ecto: Schema changeset optional attrs | plvs,es,esoa | [Reference](##ecto:-schema-changeset-optional-attrs) |
+| Ecto: Schema changeset required attrs | plvs,es,escra | [Reference](##ecto:-schema-changeset-required-attrs) |
+| LiveView: @impl Phoenix.LiveComponent | plvs,plv,@impl | [Reference](##liveview:-@impl-phoenix.livecomponent) |
+| LiveView: @impl Phoenix.LiveView | plvs,plv,@impl | [Reference](##liveview:-@impl-phoenix.liveview) |
+| LiveView: New LiveView module | plvs,plv,plvnlvm | [Reference](##liveview:-new-liveview-module) |
+| LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca,plcah | [Reference](##liveview:-phoenix.livecomponent-assign-helper) |
+| LiveView: Phoenix.LiveComponent call | plvs,plc,plcc | [Reference](##liveview:-phoenix.livecomponent-call) |
+| LiveView: Phoenix.LiveComponent handle_event | plvs,plc,plche | [Reference](##liveview:-phoenix.livecomponent-handle_event) |
+| LiveView: Phoenix.LiveComponent mount | plvs,plc,plcm | [Reference](##liveview:-phoenix.livecomponent-mount) |
+| LiveView: Phoenix.LiveComponent preload | plvs,plc,plcp | [Reference](##liveview:-phoenix.livecomponent-preload) |
+| LiveView: Phoenix.LiveComponent render | plvs,plc,plcr | [Reference](##liveview:-phoenix.livecomponent-render) |
+| LiveView: Phoenix.LiveComponent update | plvs,plc,plcu | [Reference](##liveview:-phoenix.livecomponent-update) |
+| LiveView: Render slot | plvs,plvrs | [Reference](##liveview:-render-slot) |
+| LiveView: handle_info | plvs,plv,plvhi | [Reference](##liveview:-handle_info) |
+| LiveView: render implementation | plvs,plv,plvr | [Reference](##liveview:-render-implementation) |
+| LiveView: socket destructure | plvs,plv,plvsd | [Reference](##liveview:-socket-destructure) |
+| Phoenix: Component definition | plvs,pc,pcd | [Reference](##phoenix:-component-definition) |
+| Phoenix: Context change | plvs,pctx,pctxch | [Reference](##phoenix:-context-change) |
+| Phoenix: Context create | plvs,pctx,pctxcr | [Reference](##phoenix:-context-create) |
+| Phoenix: Context delete | plvs,pctx,pctxd | [Reference](##phoenix:-context-delete) |
+| Phoenix: Context get | plvs,pctx,pctxg | [Reference](##phoenix:-context-get) |
+| Phoenix: Context list | plvs,pctx,pctxl | [Reference](##phoenix:-context-list) |
+| Phoenix: Context update | plvs,pctx,pctxu | [Reference](##phoenix:-context-update) |
+| Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf | [Reference](##phoenix:-phoenix.component.form/1) |
+| eex: Comment | plvs,eex,eexc,<%# | [Reference](##eex:-comment) |
+| eex: Replace with result | plvs,eex,<%= | [Reference](##eex:-replace-with-result) |
+| eex: Return contents | plvs,eex,eexr,<%% | [Reference](##eex:-return-contents) |
+| eex: case | plvs,eex,eexcase,<% case | [Reference](##eex:-case) |
+| eex: cond | plvs,eex,eexcond,<% cond | [Reference](##eex:-cond) |
+| eex: for | plvs,eex,eexfor,<% for | [Reference](##eex:-for) |
+| eex: if | plvs,eex,eexif,<% if | [Reference](##eex:-if) |
+| eex: inline with output | plvs,eex,<% | [Reference](##eex:-inline-with-output) |
+
+
+# Snippets
+## Ecto: Schema changeset
+
+### Prefixes
+
+<pre>plvs,es,esc</pre>
+
+### Template
+<pre>
+def changeset(${1:name}, attrs) do
+  required_attrs = [$2]
+  optional_attrs = [$3]
+
+  ${1:name}
+  |> cast(attrs, required_attrs ++ optional_attrs)
+  |> validate_required(required_attrs)
+end
+
+</pre>
+## Ecto: Schema changeset optional attrs
+
+### Prefixes
+
+<pre>plvs,es,esoa</pre>
+
+### Template
+<pre>
+optional_attrs = [$0]
+</pre>
+## Ecto: Schema changeset required attrs
+
+### Prefixes
+
+<pre>plvs,es,escra</pre>
+
+### Template
+<pre>
+required_attrs = [$0]
+</pre>
+## LiveView: @impl Phoenix.LiveComponent
+
+### Prefixes
+
+<pre>plvs,plv,@impl</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+</pre>
+## LiveView: @impl Phoenix.LiveView
+
+### Prefixes
+
+<pre>plvs,plv,@impl</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+</pre>
+## LiveView: New LiveView module
+
+### Prefixes
+
+<pre>plvs,plv,plvnlvm</pre>
+
+### Template
+<pre>
+defmodule $1 do
+  use $2, :live_view
+
+  @impl Phoenix.LiveView
+  def render(assigns) do
+    ~H"""
+    $0
+    """
+  end
+
+  @impl Phoenix.LiveView
+  def mount(${3: params}, ${4: session}, ${5: socket}) do
+    $6
+    {:ok, socket}
+  end
+end
+</pre>
+## LiveView: Phoenix.LiveComponent assign helper
+
+### Prefixes
+
+<pre>plvs,plc,plca,plcah</pre>
+
+### Template
+<pre>
+def assign_$1(socket, $1) do
+  assign(socket, $1: $1)
+end
+</pre>
+## LiveView: Phoenix.LiveComponent call
+
+### Prefixes
+
+<pre>plvs,plc,plcc</pre>
+
+### Template
+<pre>
+<.live_component
+  module={$1}
+  id={"$2"}
+  $0
+/>
+
+</pre>
+## LiveView: Phoenix.LiveComponent handle_event
+
+### Prefixes
+
+<pre>plvs,plc,plche</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
+  $0
+
+  ${4:{:noreply, socket}}
+end
+</pre>
+## LiveView: Phoenix.LiveComponent mount
+
+### Prefixes
+
+<pre>plvs,plc,plcm</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+def mount(${$1:socket}) do
+  $0
+  {:ok, ${2:socket}}
+end
+
+</pre>
+## LiveView: Phoenix.LiveComponent preload
+
+### Prefixes
+
+<pre>plvs,plc,plcp</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+def preload(${1:list_of_assigns}) do
+  $0
+  $1
+end
+
+</pre>
+## LiveView: Phoenix.LiveComponent render
+
+### Prefixes
+
+<pre>plvs,plc,plcr</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+def render(${1:assigns}) do
+  ~H"""
+  $0
+  """
+end
+
+</pre>
+## LiveView: Phoenix.LiveComponent update
+
+### Prefixes
+
+<pre>plvs,plc,plcu</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveComponent
+def update(${1:assigns}, ${2:socket}) do
+  $0
+
+  {:ok, socket}
+end
+</pre>
+## LiveView: Render slot
+
+### Prefixes
+
+<pre>plvs,plvrs</pre>
+
+### Template
+<pre>
+<%= render_slot(${1:@inner_block}) %>
+</pre>
+## LiveView: handle_info
+
+### Prefixes
+
+<pre>plvs,plv,plvhi</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def handle_info(${1:message}, ${2:socket}) do
+  $0
+
+  {:noreply, ${3:socket}}
+end
+</pre>
+## LiveView: render implementation
+
+### Prefixes
+
+<pre>plvs,plv,plvr</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def render(${1:assigns}) do
+  ~H"""
+  $0
+  """
+end
+
+</pre>
+## LiveView: socket destructure
+
+### Prefixes
+
+<pre>plvs,plv,plvsd</pre>
+
+### Template
+<pre>
+%{ assigns: %{$1} } = $0
+</pre>
+## Phoenix: Component definition
+
+### Prefixes
+
+<pre>plvs,pc,pcd</pre>
+
+### Template
+<pre>
+def ${1:component}(${2:assigns}) do
+  ~H"""
+  $3
+  """
+end
+</pre>
+## Phoenix: Context change
+
+### Prefixes
+
+<pre>plvs,pctx,pctxch</pre>
+
+### Template
+<pre>
+@doc """
+Returns an `%Ecto.Changeset{}` for tracking $1 changes.
+
+## Examples
+
+    iex> change_$1(%{field: value})
+    %Ecto.Changeset{data: %${1/(.*)/${1:/pascalcase}/}{}}
+
+"""
+def change_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs \\\\ %{} ) do
+  ${1/(.*)/${1:/pascalcase}/}.changeset($1, attrs)
+end
+
+</pre>
+## Phoenix: Context create
+
+### Prefixes
+
+<pre>plvs,pctx,pctxcr</pre>
+
+### Template
+<pre>
+@doc """
+Creates a $1.
+
+## Examples
+
+    iex> create_$1(%{field: value})
+    {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+    iex> create_$1(%{field: bad_value})
+    {:error, ...}
+
+"""
+def create_${1:name}(attrs \\\\ %{}) do
+  %${1/(.*)/${1:/pascalcase}/}{}
+  |> ${1/(.*)/${1:/pascalcase}/}.changeset(attrs)
+  |> Repo.insert()
+end
+
+</pre>
+## Phoenix: Context delete
+
+### Prefixes
+
+<pre>plvs,pctx,pctxd</pre>
+
+### Template
+<pre>
+@doc """
+  Deletes a $1.
+
+  ## Examples
+
+      iex> delete_$1($1)
+      {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+      iex> delete_$1($1)
+      {:error, %Ecto.Changeset{}}
+"""
+def delete_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1) do
+  Repo.delete($1)
+end
+
+</pre>
+## Phoenix: Context get
+
+### Prefixes
+
+<pre>plvs,pctx,pctxg</pre>
+
+### Template
+<pre>
+@doc """
+Gets a single $1.
+
+## Examples
+
+    iex> get_$1!(123)
+    %${1/(.*)/${1:/pascalcase}/}{}
+
+    iex> get_$1!(456)
+    ** (Ecto.NoResultsError)
+
+"""
+def get_${1:name}!(id) do
+  Repo.get!(${1/(.*)/${1:/pascalcase}/}, id)
+end
+
+</pre>
+## Phoenix: Context list
+
+### Prefixes
+
+<pre>plvs,pctx,pctxl</pre>
+
+### Template
+<pre>
+@doc """
+Returns the list of $1s.
+
+## Examples
+
+    iex> list_$1()
+    [%${1/(.*)/${1:/pascalcase}/}{}, ...]
+
+"""
+def list_${1:name}s do
+  Repo.all(${1/(.*)/${1:/pascalcase}/})
+end
+
+</pre>
+## Phoenix: Context update
+
+### Prefixes
+
+<pre>plvs,pctx,pctxu</pre>
+
+### Template
+<pre>
+@doc """
+Updates a $1.
+
+## Examples
+
+    iex> update_$1(%{field: value})
+    {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
+
+    iex> update_$1(%{field: bad_value})
+    {:error, %Ecto.Chnageset{}}
+
+"""
+def update_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs) do
+  $1
+  |> ${1/(.*)/${1:/pascalcase}/}.changeset(attrs)
+  |> Repo.update()
+end
+
+</pre>
+## Phoenix: Phoenix.Component.form/1
+
+### Prefixes
+
+<pre>plvs,pc,pcf</pre>
+
+### Template
+<pre>
+<.form
+  for={${1:@changeset}}
+  let={${2:form}}
+  phx-change="${3:validate}"
+  phx-submit="${4:submit}"
+>
+  $0
+</.form>
+
+</pre>
+## eex: Comment
+
+### Prefixes
+
+<pre>plvs,eex,eexc,<%#</pre>
+
+### Template
+<pre>
+<%# $0 %>
+</pre>
+## eex: Replace with result
+
+### Prefixes
+
+<pre>plvs,eex,<%=</pre>
+
+### Template
+<pre>
+<%= $0 %>
+</pre>
+## eex: Return contents
+
+### Prefixes
+
+<pre>plvs,eex,eexr,<%%</pre>
+
+### Template
+<pre>
+<%% $0 %>
+</pre>
+## eex: case
+
+### Prefixes
+
+<pre>plvs,eex,eexcase,<% case</pre>
+
+### Template
+<pre>
+<% case $1 do %>
+  <% $2 -> %>
+<% end %>
+</pre>
+## eex: cond
+
+### Prefixes
+
+<pre>plvs,eex,eexcond,<% cond</pre>
+
+### Template
+<pre>
+<%= cond do %>
+  <% $1 -> %>
+    $2
+<% end %>
+</pre>
+## eex: for
+
+### Prefixes
+
+<pre>plvs,eex,eexfor,<% for</pre>
+
+### Template
+<pre>
+<%= for $2 <- $1 do %>
+  $0
+<% end %>
+</pre>
+## eex: if
+
+### Prefixes
+
+<pre>plvs,eex,eexif,<% if</pre>
+
+### Template
+<pre>
+<%= if $1 do %>
+  $0
+<% end %>
+</pre>
+## eex: inline with output
+
+### Prefixes
+
+<pre>plvs,eex,<%</pre>
+
+### Template
+<pre>
+<% $0 %>
+</pre>
 
