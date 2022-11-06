@@ -9,9 +9,12 @@ defmodule App do
         file = File.read!(Path.absname(path, snippet_directory))
         snippet = file |> String.split("\n")
 
-        App.Snippets.generate(path)
-        |> Map.put(:body, snippet)
-        |> Map.put(:description, file)
+        snippet_data =
+          App.Snippets.generate(path)
+          |> Map.put(:body, snippet)
+
+        snippet_data
+        |> Map.put(:description, "prefixes: #{snippet_data.prefix |> Enum.join(",")}")
       end)
       |> Map.new(fn %{name: name} = meta_data -> {name, Map.delete(meta_data, :name)} end)
       |> Jason.encode!()

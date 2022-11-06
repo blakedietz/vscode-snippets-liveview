@@ -1,0 +1,6 @@
+@impl Phoenix.LiveView
+def handle_call(${1:msg}, ${2:from}, ${3:socket}) do
+  $0
+
+  ${4:{:noreply, socket}}
+end

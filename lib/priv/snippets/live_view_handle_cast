@@ -1,0 +1,6 @@
+@impl Phoenix.LiveView
+def handle_cast(${1:msg}, ${2:socket}) do
+  $0
+
+  ${3:{:noreply, socket}}
+end

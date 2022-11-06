@@ -1,5 +1,5 @@
 @impl Phoenix.LiveComponent
-def mount(${$1:socket}) do
+def mount(${1:socket}) do
   $0
   {:ok, ${2:socket}}
 end

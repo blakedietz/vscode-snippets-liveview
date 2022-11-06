@@ -40,7 +40,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Ecto: Schema changeset required attrs | plvs,es,escra | [Reference](#ecto-schema-changeset-required-attrs) |
 | LiveView: @impl Phoenix.LiveComponent | plvs,plv,@impl | [Reference](#liveview-@impl-phoenix.livecomponent) |
 | LiveView: @impl Phoenix.LiveView | plvs,plv,@impl | [Reference](#liveview-@impl-phoenix.liveview) |
-| LiveView: New LiveView module | plvs,plv,plvnlvm | [Reference](#liveview-new-liveview-module) |
+| LiveView: New LiveView module | plvs,plv,plvnlvm,defmodule | [Reference](#liveview-new-liveview-module) |
 | LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca,plcah | [Reference](#liveview-phoenix.livecomponent-assign-helper) |
 | LiveView: Phoenix.LiveComponent call | plvs,plc,plcc | [Reference](#liveview-phoenix.livecomponent-call) |
 | LiveView: Phoenix.LiveComponent handle_event | plvs,plc,plche | [Reference](#liveview-phoenix.livecomponent-handle_event) |
@@ -48,10 +48,16 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: Phoenix.LiveComponent preload | plvs,plc,plcp | [Reference](#liveview-phoenix.livecomponent-preload) |
 | LiveView: Phoenix.LiveComponent render | plvs,plc,plcr | [Reference](#liveview-phoenix.livecomponent-render) |
 | LiveView: Phoenix.LiveComponent update | plvs,plc,plcu | [Reference](#liveview-phoenix.livecomponent-update) |
+| LiveView: Phoenix.LiveView mount | plvs,plv,plvm,def mount | [Reference](#liveview-phoenix.liveview-mount) |
 | LiveView: Render slot | plvs,plvrs | [Reference](#liveview-render-slot) |
-| LiveView: handle_info | plvs,plv,plvhi | [Reference](#liveview-handle_info) |
-| LiveView: render implementation | plvs,plv,plvr | [Reference](#liveview-render-implementation) |
-| LiveView: socket destructure | plvs,plv,plvsd | [Reference](#liveview-socket-destructure) |
+| LiveView: handle_call | plvs,plv,plvhi,def,def handle_call | [Reference](#liveview-handle_call) |
+| LiveView: handle_cast | plvs,plv,plvhi,def,def handle_cast | [Reference](#liveview-handle_cast) |
+| LiveView: handle_event | plvs,plv,plvhe,def,def handle_event | [Reference](#liveview-handle_event) |
+| LiveView: handle_info | plvs,plv,plvhi,def,def handle_info | [Reference](#liveview-handle_info) |
+| LiveView: handle_params | plvs,plv,plvhe,def,def handle_params | [Reference](#liveview-handle_params) |
+| LiveView: render implementation | plvs,plv,plvr,def render | [Reference](#liveview-render-implementation) |
+| LiveView: socket destructure | plvs,plv,plvsd,socket | [Reference](#liveview-socket-destructure) |
+| LiveView: terminate | plvs,plv,plvt,def terminate | [Reference](#liveview-terminate) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
@@ -133,7 +139,7 @@ required_attrs = [$0]
 
 ### Prefixes
 
-<pre>plvs,plv,plvnlvm</pre>
+<pre>plvs,plv,plvnlvm,defmodule</pre>
 
 ### Template
 <pre>
@@ -205,7 +211,7 @@ end
 ### Template
 <pre>
 @impl Phoenix.LiveComponent
-def mount(${$1:socket}) do
+def mount(${1:socket}) do
   $0
   {:ok, ${2:socket}}
 end
@@ -257,6 +263,20 @@ def update(${1:assigns}, ${2:socket}) do
   {:ok, socket}
 end
 </pre>
+## LiveView: Phoenix.LiveView mount
+
+### Prefixes
+
+<pre>plvs,plv,plvm,def mount</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def mount(${1:params}, ${2:session}, ${3:socket}) do
+  ${4:{:noreply, socket}}
+end
+
+</pre>
 ## LiveView: Render slot
 
 ### Prefixes
@@ -267,11 +287,59 @@ end
 <pre>
 <%= render_slot(${1:@inner_block}) %>
 </pre>
+## LiveView: handle_call
+
+### Prefixes
+
+<pre>plvs,plv,plvhi,def,def handle_call</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def handle_call(${1:msg}, ${2:from}, ${3:socket}) do
+  $0
+
+  ${4:{:noreply, socket}}
+end
+
+</pre>
+## LiveView: handle_cast
+
+### Prefixes
+
+<pre>plvs,plv,plvhi,def,def handle_cast</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def handle_cast(${1:msg}, ${2:socket}) do
+  $0
+
+  ${3:{:noreply, socket}}
+end
+
+</pre>
+## LiveView: handle_event
+
+### Prefixes
+
+<pre>plvs,plv,plvhe,def,def handle_event</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
+  $0
+
+  ${4:{:noreply, socket}}
+end
+
+</pre>
 ## LiveView: handle_info
 
 ### Prefixes
 
-<pre>plvs,plv,plvhi</pre>
+<pre>plvs,plv,plvhi,def,def handle_info</pre>
 
 ### Template
 <pre>
@@ -282,11 +350,27 @@ def handle_info(${1:message}, ${2:socket}) do
   {:noreply, ${3:socket}}
 end
 </pre>
+## LiveView: handle_params
+
+### Prefixes
+
+<pre>plvs,plv,plvhe,def,def handle_params</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def handle_params(${1:event}, ${2:uri}, ${3:socket}) do
+  $0
+
+  ${4:{:noreply, socket}}
+end
+
+</pre>
 ## LiveView: render implementation
 
 ### Prefixes
 
-<pre>plvs,plv,plvr</pre>
+<pre>plvs,plv,plvr,def render</pre>
 
 ### Template
 <pre>
@@ -302,11 +386,25 @@ end
 
 ### Prefixes
 
-<pre>plvs,plv,plvsd</pre>
+<pre>plvs,plv,plvsd,socket</pre>
 
 ### Template
 <pre>
 %{ assigns: %{$1} } = $0
+</pre>
+## LiveView: terminate
+
+### Prefixes
+
+<pre>plvs,plv,plvt,def terminate</pre>
+
+### Template
+<pre>
+@impl Phoenix.LiveView
+def terminate(${1: reason}, ${2:socket}) do
+  $3
+end
+
 </pre>
 ## Phoenix: Component definition
 

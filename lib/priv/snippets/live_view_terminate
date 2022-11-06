@@ -1,0 +1,4 @@
+@impl Phoenix.LiveView
+def terminate(${1: reason}, ${2:socket}) do
+  $3
+end
