@@ -1,5 +1,5 @@
 <.live_component
   module={$1}
-  id={"$2"}
+  id={$2}
   $0
 />
