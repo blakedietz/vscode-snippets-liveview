@@ -1,5 +1,5 @@
 @doc """
-  Deletes a $1.
+  Deletes a ${1/(.*)/${1:/pascalcase}/}.
 
   ## Examples
 

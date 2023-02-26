@@ -1,5 +1,5 @@
 @doc """
-Creates a $1.
+Creates a ${1/(.*)/${1:/pascalcase}/}.
 
 ## Examples
 

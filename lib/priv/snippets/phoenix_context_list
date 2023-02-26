@@ -1,5 +1,5 @@
 @doc """
-Returns the list of $1s.
+Returns the list of ${1/(.*)/${1:/pascalcase}/}.
 
 ## Examples
 

@@ -451,7 +451,7 @@ end
 ### Template
 <pre>
 @doc """
-Creates a $1.
+Creates a ${1/(.*)/${1:/pascalcase}/}.
 
 ## Examples
 
@@ -478,7 +478,7 @@ end
 ### Template
 <pre>
 @doc """
-  Deletes a $1.
+  Deletes a ${1/(.*)/${1:/pascalcase}/}.
 
   ## Examples
 
@@ -502,7 +502,7 @@ end
 ### Template
 <pre>
 @doc """
-Gets a single $1.
+Gets a single ${1/(.*)/${1:/pascalcase}/}.
 
 ## Examples
 
@@ -527,7 +527,7 @@ end
 ### Template
 <pre>
 @doc """
-Returns the list of $1s.
+Returns the list of ${1/(.*)/${1:/pascalcase}/}.
 
 ## Examples
 
@@ -557,7 +557,7 @@ Updates a $1.
     {:ok, %${1/(.*)/${1:/pascalcase}/}{}}
 
     iex> update_$1(%{field: bad_value})
-    {:error, %Ecto.Chnageset{}}
+    {:error, %Ecto.Changeset{}}
 
 """
 def update_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs) do
