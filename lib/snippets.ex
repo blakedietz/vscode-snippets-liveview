@@ -232,6 +232,13 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("phoenix_component_macros_attr") do
+    %Snippet{
+      name: "Phoenix: Component Macros attr",
+      prefix: ["plvs", "pc", "pcm", "pcma", "attr"]
+    }
+  end
+
   def generate("phoenix_context_change") do
     %Snippet{
       name: "Phoenix: Context change",

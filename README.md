@@ -58,6 +58,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: render implementation | plvs,plv,plvr,def render | [Reference](#liveview-render-implementation) |
 | LiveView: socket destructure | plvs,plv,plvsd,socket | [Reference](#liveview-socket-destructure) |
 | LiveView: terminate | plvs,plv,plvt,def terminate | [Reference](#liveview-terminate) |
+| Phoenix: Component Macros attr | plvs,pc,pcm,pcma,attr | [Reference](#phoenix-component-macros-attr) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
@@ -406,6 +407,17 @@ def terminate(${1: reason}, ${2:socket}) do
 end
 
 </pre>
+## Phoenix: Component Macros attr
+
+### Prefixes
+
+<pre>plvs,pc,pcm,pcma,attr</pre>
+
+### Template
+<pre>
+attr :$1, :$2, required: $3$0
+
+</pre>
 ## Phoenix: Component definition
 
 ### Prefixes
@@ -429,7 +441,7 @@ end
 ### Template
 <pre>
 @doc """
-Returns an `%Ecto.Changeset{}` for tracking $1 changes.
+Returns an `%Ecto.Changeset{}` for tracking ${1/(.*)/${1:/pascalcase}/} changes.
 
 ## Examples
 
