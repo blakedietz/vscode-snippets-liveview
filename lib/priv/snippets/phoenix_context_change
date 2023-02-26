@@ -1,5 +1,5 @@
 @doc """
-Returns an `%Ecto.Changeset{}` for tracking $1 changes.
+Returns an `%Ecto.Changeset{}` for tracking ${1/(.*)/${1:/pascalcase}/} changes.
 
 ## Examples
 
