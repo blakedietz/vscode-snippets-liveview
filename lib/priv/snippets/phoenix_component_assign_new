@@ -1,0 +1,3 @@
+assign_new(${1:socket_or_assigns}, :${2:key}, ${3:fn %{$4} = assigns ->
+  $0
+end})

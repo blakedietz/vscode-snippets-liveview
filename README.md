@@ -62,6 +62,10 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Phoenix: Component Macros embed_templates/2 | plvs,pc,pcm,pcme,pcmet,embed_ | [Reference](#phoenix-component-macros-embed_templates/2) |
 | Phoenix: Component Macros sigil_H/2 | plvs,pc,pcm,pcms,pcmsh,~H | [Reference](#phoenix-component-macros-sigil_h/2) |
 | Phoenix: Component Macros slot/2 | plvs,pc,pcm,pcms,slot | [Reference](#phoenix-component-macros-slot/2) |
+| Phoenix: Component assign/2 | plvs,pc,pca,a,assign | [Reference](#phoenix-component-assign/2) |
+| Phoenix: Component assign_new/3 | plvs,pc,pca,pcan,a,assign,assign_new | [Reference](#phoenix-component-assign_new/3) |
+| Phoenix: Component assigns_to_attributes/2 | plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes | [Reference](#phoenix-component-assigns_to_attributes/2) |
+| Phoenix: Component changed?/2 | plvs,pc,pcc,c,changed? | [Reference](#phoenix-component-changed?/2) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
@@ -461,6 +465,52 @@ $0
 ### Template
 <pre>
 slot :${1:name}, required: $2
+
+</pre>
+## Phoenix: Component assign/2
+
+### Prefixes
+
+<pre>plvs,pc,pca,a,assign</pre>
+
+### Template
+<pre>
+assign(${1:socket_or_assigns}, $2: $3)$0
+
+</pre>
+## Phoenix: Component assign_new/3
+
+### Prefixes
+
+<pre>plvs,pc,pca,pcan,a,assign,assign_new</pre>
+
+### Template
+<pre>
+assign_new(${1:socket_or_assigns}, :${2:key}, ${3:fn %{$4} = assigns ->
+  $0
+end})
+
+</pre>
+## Phoenix: Component assigns_to_attributes/2
+
+### Prefixes
+
+<pre>plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes</pre>
+
+### Template
+<pre>
+assigns_to_attributes(${1:assigns}, ${2:[]})$0
+
+</pre>
+## Phoenix: Component changed?/2
+
+### Prefixes
+
+<pre>plvs,pc,pcc,c,changed?</pre>
+
+### Template
+<pre>
+changed?(${1:socket_or_assigns}, :$2)$0
 
 </pre>
 ## Phoenix: Component definition

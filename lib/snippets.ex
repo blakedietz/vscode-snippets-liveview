@@ -218,6 +218,34 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("phoenix_component_assign") do
+    %Snippet{
+      name: "Phoenix: Component assign/2",
+      prefix: ["plvs", "pc", "pca", "a", "assign"]
+    }
+  end
+
+  def generate("phoenix_component_assign_new") do
+    %Snippet{
+      name: "Phoenix: Component assign_new/3",
+      prefix: ["plvs", "pc", "pca", "pcan", "a", "assign", "assign_new"]
+    }
+  end
+
+  def generate("phoenix_component_assigns_to_attributes") do
+    %Snippet{
+      name: "Phoenix: Component assigns_to_attributes/2",
+      prefix: ["plvs", "pc", "pca", "pcat", "pcata", "a", "assigns", "assigns_to_attributes"]
+    }
+  end
+
+  def generate("phoenix_component_changed?") do
+    %Snippet{
+      name: "Phoenix: Component changed?/2",
+      prefix: ["plvs", "pc", "pcc", "c", "changed?"]
+    }
+  end
+
   def generate("phoenix_component_definition") do
     %Snippet{
       name: "Phoenix: Component definition",
