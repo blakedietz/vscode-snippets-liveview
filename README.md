@@ -58,7 +58,10 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: render implementation | plvs,plv,plvr,def render | [Reference](#liveview-render-implementation) |
 | LiveView: socket destructure | plvs,plv,plvsd,socket | [Reference](#liveview-socket-destructure) |
 | LiveView: terminate | plvs,plv,plvt,def terminate | [Reference](#liveview-terminate) |
-| Phoenix: Component Macros attr | plvs,pc,pcm,pcma,attr | [Reference](#phoenix-component-macros-attr) |
+| Phoenix: Component Macros attr/3 | plvs,pc,pcm,pcma,attr | [Reference](#phoenix-component-macros-attr/3) |
+| Phoenix: Component Macros embed_templates/2 | plvs,pc,pcm,pcme,pcmet,embed_ | [Reference](#phoenix-component-macros-embed_templates/2) |
+| Phoenix: Component Macros sigil_H/2 | plvs,pc,pcm,pcms,pcmsh,~H | [Reference](#phoenix-component-macros-sigil_h/2) |
+| Phoenix: Component Macros slot/2 | plvs,pc,pcm,pcms,slot | [Reference](#phoenix-component-macros-slot/2) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
@@ -66,7 +69,14 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Phoenix: Context get | plvs,pctx,pctxg | [Reference](#phoenix-context-get) |
 | Phoenix: Context list | plvs,pctx,pctxl | [Reference](#phoenix-context-list) |
 | Phoenix: Context update | plvs,pctx,pctxu | [Reference](#phoenix-context-update) |
-| Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf | [Reference](#phoenix-phoenix.component.form/1) |
+| Phoenix: Phoenix.Component.dynamic_tag/1 | plvs,pc,pcc,pcd,pcdt,<.,<.dynamic_tag,dynamic_tag | [Reference](#phoenix-phoenix.component.dynamic_tag/1) |
+| Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf,<.,<.form,form | [Reference](#phoenix-phoenix.component.form/1) |
+| Phoenix: Phoenix.Component.inputs_for/1 | plvs,pc,pci,pcif,<.,<.inputs_for,inputs_for | [Reference](#phoenix-phoenix.component.inputs_for/1) |
+| Phoenix: Phoenix.Component.intersperse/1 | plvs,pc,pci,<.,<.intersperse,intersperse | [Reference](#phoenix-phoenix.component.intersperse/1) |
+| Phoenix: Phoenix.Component.link/1 | plvs,pc,pcl,<.,<.link,link | [Reference](#phoenix-phoenix.component.link/1) |
+| Phoenix: Phoenix.Component.live_file_input/1 | plvs,pc,pc,pclf,pclfi,<.,<.live_,<.live_file,live_file_input | [Reference](#phoenix-phoenix.component.live_file_input/1) |
+| Phoenix: Phoenix.Component.live_img_preview/1 | plvs,pc,pc,pcli,pclip,<.,<.live_,<.live_img,live_img_preview | [Reference](#phoenix-phoenix.component.live_img_preview/1) |
+| Phoenix: Phoenix.Component.live_title/1 | plvs,pc,pc,pclt,<.,<.live_,<.live_title,live_title | [Reference](#phoenix-phoenix.component.live_title/1) |
 | eex: Comment | plvs,eex,eexc,<%# | [Reference](#eex-comment) |
 | eex: Replace with result | plvs,eex,<%= | [Reference](#eex-replace-with-result) |
 | eex: Return contents | plvs,eex,eexr,<%% | [Reference](#eex-return-contents) |
@@ -183,7 +193,7 @@ end
 <pre>
 <.live_component
   module={$1}
-  id={"$2"}
+  id={$2}
   $0
 />
 
@@ -407,7 +417,7 @@ def terminate(${1: reason}, ${2:socket}) do
 end
 
 </pre>
-## Phoenix: Component Macros attr
+## Phoenix: Component Macros attr/3
 
 ### Prefixes
 
@@ -416,6 +426,41 @@ end
 ### Template
 <pre>
 attr :$1, :$2, required: $3$0
+
+</pre>
+## Phoenix: Component Macros embed_templates/2
+
+### Prefixes
+
+<pre>plvs,pc,pcm,pcme,pcmet,embed_</pre>
+
+### Template
+<pre>
+embed_templates "$1"
+
+</pre>
+## Phoenix: Component Macros sigil_H/2
+
+### Prefixes
+
+<pre>plvs,pc,pcm,pcms,pcmsh,~H</pre>
+
+### Template
+<pre>
+~H"""
+$0
+"""
+
+</pre>
+## Phoenix: Component Macros slot/2
+
+### Prefixes
+
+<pre>plvs,pc,pcm,pcms,slot</pre>
+
+### Template
+<pre>
+slot :${1:name}, required: $2
 
 </pre>
 ## Phoenix: Component definition
@@ -579,11 +624,24 @@ def update_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs) do
 end
 
 </pre>
+## Phoenix: Phoenix.Component.dynamic_tag/1
+
+### Prefixes
+
+<pre>plvs,pc,pcc,pcd,pcdt,<.,<.dynamic_tag,dynamic_tag</pre>
+
+### Template
+<pre>
+<.dynamic_tag name="$1" type="$2">
+  $0
+</.dynamic_tag >
+
+</pre>
 ## Phoenix: Phoenix.Component.form/1
 
 ### Prefixes
 
-<pre>plvs,pc,pcf</pre>
+<pre>plvs,pc,pcf,<.,<.form,form</pre>
 
 ### Template
 <pre>
@@ -595,6 +653,82 @@ end
 >
   $0
 </.form>
+
+</pre>
+## Phoenix: Phoenix.Component.inputs_for/1
+
+### Prefixes
+
+<pre>plvs,pc,pci,pcif,<.,<.inputs_for,inputs_for</pre>
+
+### Template
+<pre>
+<.inputs_for :let={${1:f_nested}} field={${2:f[:nested]}}>
+  $0
+<.inputs_for>
+
+</pre>
+## Phoenix: Phoenix.Component.intersperse/1
+
+### Prefixes
+
+<pre>plvs,pc,pci,<.,<.intersperse,intersperse</pre>
+
+### Template
+<pre>
+<.intersperse :let={${1:item}} enum={${2:[$3]}}>
+  <:separator>
+    $0
+  </:separator>
+<./intersperse>
+
+</pre>
+## Phoenix: Phoenix.Component.link/1
+
+### Prefixes
+
+<pre>plvs,pc,pcl,<.,<.link,link</pre>
+
+### Template
+<pre>
+<.link $1>
+  $0
+<./link>
+
+</pre>
+## Phoenix: Phoenix.Component.live_file_input/1
+
+### Prefixes
+
+<pre>plvs,pc,pc,pclf,pclfi,<.,<.live_,<.live_file,live_file_input</pre>
+
+### Template
+<pre>
+<.live_file_input upload={@uploads.$1} />$0
+
+</pre>
+## Phoenix: Phoenix.Component.live_img_preview/1
+
+### Prefixes
+
+<pre>plvs,pc,pc,pcli,pclip,<.,<.live_,<.live_img,live_img_preview</pre>
+
+### Template
+<pre>
+<.live_image_preview entry={$1}$2/>$0
+
+</pre>
+## Phoenix: Phoenix.Component.live_title/1
+
+### Prefixes
+
+<pre>plvs,pc,pc,pclt,<.,<.live_,<.live_title,live_title</pre>
+
+### Template
+<pre>
+<.live_title prefix="${1:"My App"}">
+  <%= assigns[$2] || "Welcome" %>
+<./live_title>
 
 </pre>
 ## eex: Comment

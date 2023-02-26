@@ -1,0 +1,5 @@
+<.intersperse :let={${1:item}} enum={${2:[$3]}}>
+  <:separator>
+    $0
+  </:separator>
+<./intersperse>

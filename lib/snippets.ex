@@ -225,17 +225,116 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("phoenix_component_dynamic_tag") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.dynamic_tag/1",
+      prefix: ["plvs", "pc", "pcc", "pcd", "pcdt", "<.", "<.dynamic_tag", "dynamic_tag"]
+    }
+  end
+
   def generate("phoenix_component_form") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.form/1",
-      prefix: ["plvs", "pc", "pcf"]
+      prefix: ["plvs", "pc", "pcf", "<.", "<.form", "form"]
+    }
+  end
+
+  def generate("phoenix_component_inputs_for") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.inputs_for/1",
+      prefix: ["plvs", "pc", "pci", "pcif", "<.", "<.inputs_for", "inputs_for"]
+    }
+  end
+
+  def generate("phoenix_component_intersperse") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.intersperse/1",
+      prefix: ["plvs", "pc", "pci", "<.", "<.intersperse", "intersperse"]
+    }
+  end
+
+  def generate("phoenix_component_link") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.link/1",
+      prefix: ["plvs", "pc", "pcl", "<.", "<.link", "link"]
+    }
+  end
+
+  def generate("phoenix_component_live_file_input") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.live_file_input/1",
+      prefix: [
+        "plvs",
+        "pc",
+        "pc",
+        "pclf",
+        "pclfi",
+        "<.",
+        "<.live_",
+        "<.live_file",
+        "live_file_input"
+      ]
+    }
+  end
+
+  def generate("phoenix_component_live_img_preview") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.live_img_preview/1",
+      prefix: [
+        "plvs",
+        "pc",
+        "pc",
+        "pcli",
+        "pclip",
+        "<.",
+        "<.live_",
+        "<.live_img",
+        "live_img_preview"
+      ]
+    }
+  end
+
+  def generate("phoenix_component_live_title") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.live_title/1",
+      prefix: [
+        "plvs",
+        "pc",
+        "pc",
+        "pclt",
+        "<.",
+        "<.live_",
+        "<.live_title",
+        "live_title"
+      ]
     }
   end
 
   def generate("phoenix_component_macros_attr") do
     %Snippet{
-      name: "Phoenix: Component Macros attr",
+      name: "Phoenix: Component Macros attr/3",
       prefix: ["plvs", "pc", "pcm", "pcma", "attr"]
+    }
+  end
+
+  def generate("phoenix_component_macros_embed_templates") do
+    %Snippet{
+      name: "Phoenix: Component Macros embed_templates/2",
+      prefix: ["plvs", "pc", "pcm", "pcme", "pcmet", "embed_"]
+    }
+  end
+
+  def generate("phoenix_component_macros_sigil_h") do
+    %Snippet{
+      name: "Phoenix: Component Macros sigil_H/2",
+      prefix: ["plvs", "pc", "pcm", "pcms", "pcmsh", "~H"]
+    }
+  end
+
+  def generate("phoenix_component_macros_slot") do
+    %Snippet{
+      name: "Phoenix: Component Macros slot/2",
+      prefix: ["plvs", "pc", "pcm", "pcms", "slot"]
     }
   end
 
