@@ -239,7 +239,7 @@ defmodule App.Snippets do
     }
   end
 
-  def generate("phoenix_component_changed?") do
+  def generate("phoenix_component_changed") do
     %Snippet{
       name: "Phoenix: Component changed?/2",
       prefix: ["plvs", "pc", "pcc", "c", "changed?"]
