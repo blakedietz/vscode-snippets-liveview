@@ -65,7 +65,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Phoenix: Component assign/2 | plvs,pc,pca,a,assign | [Reference](#phoenix-component-assign/2) |
 | Phoenix: Component assign_new/3 | plvs,pc,pca,pcan,a,assign,assign_new | [Reference](#phoenix-component-assign_new/3) |
 | Phoenix: Component assigns_to_attributes/2 | plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes | [Reference](#phoenix-component-assigns_to_attributes/2) |
-| Phoenix: Component changed?/2 | plvs,pc,pcc,c,changed? | [Reference](#phoenix-component-changed?/2) |
+| Phoenix: Component changed?/2 | plvs,pc,pcc,c,changed? | [Reference](#phoenix-component-changed2) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
