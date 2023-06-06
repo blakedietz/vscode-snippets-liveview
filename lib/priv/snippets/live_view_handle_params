@@ -1,5 +1,5 @@
 @impl Phoenix.LiveView
-def handle_params(${1:event}, ${2:uri}, ${3:socket}) do
+def handle_params(${1:unsigned_params}, ${2:uri}, ${3:socket}) do
   $0
 
   ${4:{:noreply, socket}}

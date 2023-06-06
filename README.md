@@ -715,7 +715,7 @@ end
 <pre>
 <.inputs_for :let={${1:f_nested}} field={${2:f[:nested]}}>
   $0
-<.inputs_for>
+</.inputs_for>
 
 </pre>
 ## Phoenix: Phoenix.Component.intersperse/1
