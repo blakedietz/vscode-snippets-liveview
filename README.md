@@ -65,7 +65,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Phoenix: Component assign/2 | plvs,pc,pca,a,assign | [Reference](#phoenix-component-assign/2) |
 | Phoenix: Component assign_new/3 | plvs,pc,pca,pcan,a,assign,assign_new | [Reference](#phoenix-component-assign_new/3) |
 | Phoenix: Component assigns_to_attributes/2 | plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes | [Reference](#phoenix-component-assigns_to_attributes/2) |
-| Phoenix: Component changed?/2 | plvs,pc,pcc,c,changed? | [Reference](#phoenix-component-changed2) |
+| Phoenix: Component changed?/2 | plvs,pc,pcc,c,changed? | [Reference](#phoenix-component-changed?/2) |
 | Phoenix: Component definition | plvs,pc,pcd | [Reference](#phoenix-component-definition) |
 | Phoenix: Context change | plvs,pctx,pctxch | [Reference](#phoenix-context-change) |
 | Phoenix: Context create | plvs,pctx,pctxcr | [Reference](#phoenix-context-create) |
@@ -374,7 +374,7 @@ end
 ### Template
 <pre>
 @impl Phoenix.LiveView
-def handle_params(${1:event}, ${2:uri}, ${3:socket}) do
+def handle_params(${1:unsigned_params}, ${2:uri}, ${3:socket}) do
   $0
 
   ${4:{:noreply, socket}}
@@ -870,4 +870,28 @@ end
 <pre>
 <% $0 %>
 </pre>
+ 
 
+
+# Contributing
+
+## Generating snippets and documentation
+  
+### Update the version
+  
+Before genreating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
+
+## Run the build script
+
+```sh
+mix escript.build;
+./app
+```
+
+This generates the README.md and corresponding snippet json.
+
+## Publishing
+
+```sh
+mix escript.build; ./app; vsce package;
+```
