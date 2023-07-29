@@ -165,7 +165,7 @@ defmodule App.Snippets do
   def generate("live_view_handle_params") do
     %Snippet{
       name: "LiveView: handle_params",
-      prefix: ["plvs", "plv", "plvhe", "def", "def handle_params"]
+      prefix: ["plvs", "plv", "plvhp", "def", "def handle_params"]
     }
   end
 
