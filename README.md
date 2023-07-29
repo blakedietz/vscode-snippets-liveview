@@ -730,7 +730,7 @@ end
   <:separator>
     $0
   </:separator>
-<./intersperse>
+</.intersperse>
 
 </pre>
 ## Phoenix: Phoenix.Component.link/1
@@ -743,7 +743,7 @@ end
 <pre>
 <.link $1>
   $0
-<./link>
+</.link>
 
 </pre>
 ## Phoenix: Phoenix.Component.live_file_input/1
@@ -778,7 +778,7 @@ end
 <pre>
 <.live_title prefix="${1:"My App"}">
   <%= assigns[$2] || "Welcome" %>
-<./live_title>
+</.live_title>
 
 </pre>
 ## eex: Comment
