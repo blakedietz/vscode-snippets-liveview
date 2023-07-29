@@ -256,6 +256,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_dynamic_tag") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.dynamic_tag/1",
+      scope: "phoenix-heex,html",
       prefix: ["plvs", "pc", "pcc", "pcd", "pcdt", "<.", "<.dynamic_tag", "dynamic_tag"]
     }
   end
@@ -263,6 +264,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_form") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.form/1",
+      scope: "phoenix-heex,html",
       prefix: ["plvs", "pc", "pcf", "<.", "<.form", "form"]
     }
   end
@@ -270,6 +272,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_inputs_for") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.inputs_for/1",
+      scope: "phoenix-heex,html",
       prefix: ["plvs", "pc", "pci", "pcif", "<.", "<.inputs_for", "inputs_for"]
     }
   end
@@ -277,6 +280,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_intersperse") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.intersperse/1",
+      scope: "phoenix-heex,html",
       prefix: ["plvs", "pc", "pci", "<.", "<.intersperse", "intersperse"]
     }
   end
@@ -284,6 +288,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_link") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.link/1",
+      scope: "phoenix-heex,html",
       prefix: ["plvs", "pc", "pcl", "<.", "<.link", "link"]
     }
   end
@@ -291,6 +296,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_live_file_input") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.live_file_input/1",
+      scope: "phoenix-heex,html",
       prefix: [
         "plvs",
         "pc",
@@ -308,6 +314,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_live_img_preview") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.live_img_preview/1",
+      scope: "phoenix-heex,html",
       prefix: [
         "plvs",
         "pc",
@@ -325,6 +332,7 @@ defmodule App.Snippets do
   def generate("phoenix_component_live_title") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.live_title/1",
+      scope: "phoenix-heex,html",
       prefix: [
         "plvs",
         "pc",
