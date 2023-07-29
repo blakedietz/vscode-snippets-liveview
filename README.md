@@ -54,7 +54,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: handle_cast | plvs,plv,plvhi,def,def handle_cast | [Reference](#liveview-handle_cast) |
 | LiveView: handle_event | plvs,plv,plvhe,def,def handle_event | [Reference](#liveview-handle_event) |
 | LiveView: handle_info | plvs,plv,plvhi,def,def handle_info | [Reference](#liveview-handle_info) |
-| LiveView: handle_params | plvs,plv,plvhp,def,def handle_params | [Reference](#liveview-handle_params) |
+| LiveView: handle_params | plvs,plv,plvhe,def,def handle_params | [Reference](#liveview-handle_params) |
 | LiveView: render implementation | plvs,plv,plvr,def render | [Reference](#liveview-render-implementation) |
 | LiveView: socket destructure | plvs,plv,plvsd,socket | [Reference](#liveview-socket-destructure) |
 | LiveView: terminate | plvs,plv,plvt,def terminate | [Reference](#liveview-terminate) |
@@ -369,7 +369,7 @@ end
 
 ### Prefixes
 
-<pre>plvs,plv,plvhp,def,def handle_params</pre>
+<pre>plvs,plv,plvhe,def,def handle_params</pre>
 
 ### Template
 <pre>
@@ -730,7 +730,7 @@ end
   <:separator>
     $0
   </:separator>
-</.intersperse>
+<./intersperse>
 
 </pre>
 ## Phoenix: Phoenix.Component.link/1
@@ -743,7 +743,7 @@ end
 <pre>
 <.link $1>
   $0
-</.link>
+<./link>
 
 </pre>
 ## Phoenix: Phoenix.Component.live_file_input/1
@@ -778,7 +778,7 @@ end
 <pre>
 <.live_title prefix="${1:"My App"}">
   <%= assigns[$2] || "Welcome" %>
-</.live_title>
+<./live_title>
 
 </pre>
 ## eex: Comment
@@ -870,16 +870,16 @@ end
 <pre>
 <% $0 %>
 </pre>
- 
+
 
 
 # Contributing
 
 ## Generating snippets and documentation
-  
+
 ### Update the version
-  
-Before genreating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
+
+Before generating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
 
 ## Run the build script
 
@@ -893,5 +893,9 @@ This generates the README.md and corresponding snippet json.
 ## Publishing
 
 ```sh
-mix escript.build; ./app; vsce package;
+mix escript.build;
+./app;
+vsce package;
+# Assuming you have the necessary tokens on your dev machine
+vsce publish;
 ```

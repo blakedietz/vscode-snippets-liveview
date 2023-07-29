@@ -82,16 +82,16 @@ defmodule App do
     #{doc_table}
 
     # Snippets
-    #{snippet_examples} 
+    #{snippet_examples}
 
 
     # Contributing
 
     ## Generating snippets and documentation
-      
+
     ### Update the version
-      
-    Before genreating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
+
+    Before generating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
 
     ## Run the build script
 
@@ -105,8 +105,8 @@ defmodule App do
     ## Publishing
 
     ```sh
-    mix escript.build; 
-    ./app; 
+    mix escript.build;
+    ./app;
     vsce package;
     # Assuming you have the necessary tokens on your dev machine
     vsce publish;
