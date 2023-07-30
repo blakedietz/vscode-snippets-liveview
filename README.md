@@ -51,7 +51,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: Phoenix.LiveView mount | plvs,plv,plvm,def mount | [Reference](#liveview-phoenix.liveview-mount) |
 | LiveView: Render slot | plvs,plvrs | [Reference](#liveview-render-slot) |
 | LiveView: handle_call | plvs,plv,plvhc,plvhcl,def,def handle_call | [Reference](#liveview-handle_call) |
-| LiveView: handle_cast | plvs,plv,plvhc,plvhcl,def,def handle_cast | [Reference](#liveview-handle_cast) |
+| LiveView: handle_cast | plvs,plv,plvhc,plvhcs,def,def handle_cast | [Reference](#liveview-handle_cast) |
 | LiveView: handle_event | plvs,plv,plvhe,def,def handle_event | [Reference](#liveview-handle_event) |
 | LiveView: handle_info | plvs,plv,plvhi,def,def handle_info | [Reference](#liveview-handle_info) |
 | LiveView: handle_params | plvs,plv,plvhp,def,def handle_params | [Reference](#liveview-handle_params) |
