@@ -137,14 +137,14 @@ defmodule App.Snippets do
   def generate("live_view_handle_call") do
     %Snippet{
       name: "LiveView: handle_call",
-      prefix: ["plvs", "plv", "plvhi", "def", "def handle_call"]
+      prefix: ["plvs", "plv", "plvhc", "plvhcl", "def", "def handle_call"]
     }
   end
 
   def generate("live_view_handle_cast") do
     %Snippet{
       name: "LiveView: handle_cast",
-      prefix: ["plvs", "plv", "plvhi", "def", "def handle_cast"]
+      prefix: ["plvs", "plv", "plvhc", "plvhcs", "def", "def handle_cast"]
     }
   end
 
