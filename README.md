@@ -42,7 +42,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | LiveView: @impl Phoenix.LiveView | plvs,plv,@impl | [Reference](#liveview-@impl-phoenix.liveview) |
 | LiveView: New LiveView module | plvs,plv,plvnlvm,defmodule | [Reference](#liveview-new-liveview-module) |
 | LiveView: Phoenix.LiveComponent assign helper | plvs,plc,plca,plcah | [Reference](#liveview-phoenix.livecomponent-assign-helper) |
-| LiveView: Phoenix.LiveComponent call | plvs,plc,plcc | [Reference](#liveview-phoenix.livecomponent-call) |
+| LiveView: Phoenix.LiveComponent call | plvs,plc,plcc,<.,<.live_component,live_component | [Reference](#liveview-phoenix.livecomponent-call) |
 | LiveView: Phoenix.LiveComponent handle_event | plvs,plc,plche | [Reference](#liveview-phoenix.livecomponent-handle_event) |
 | LiveView: Phoenix.LiveComponent mount | plvs,plc,plcm | [Reference](#liveview-phoenix.livecomponent-mount) |
 | LiveView: Phoenix.LiveComponent preload | plvs,plc,plcp | [Reference](#liveview-phoenix.livecomponent-preload) |
@@ -191,7 +191,7 @@ end
 
 ### Prefixes
 
-<pre>plvs,plc,plcc</pre>
+<pre>plvs,plc,plcc,<.,<.live_component,live_component</pre>
 
 ### Template
 <pre>
