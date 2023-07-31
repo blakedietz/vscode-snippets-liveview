@@ -157,15 +157,15 @@ defmodule App.Snippets do
     %Snippet{
       name: "LiveView: handle_call",
       scope: "elixir",
-      prefix: ["plvs", "plv", "plvhi", "def", "def handle_call"]
+      prefix: ["plvs", "plv", "plvhc", "plvhcl", "def", "def handle_call"]
     }
   end
 
   def generate("live_view_handle_cast") do
     %Snippet{
       name: "LiveView: handle_cast",
+      prefix: ["plvs", "plv", "plvhc", "plvhcs", "def", "def handle_cast"]
       scope: "elixir",
-      prefix: ["plvs", "plv", "plvhi", "def", "def handle_cast"]
     }
   end
 
