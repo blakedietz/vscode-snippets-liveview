@@ -3,7 +3,7 @@ defmodule App do
     snippet_directory = Path.absname("lib/priv/snippets", File.cwd!())
     {:ok, paths} = File.ls(snippet_directory)
 
-    snippet_json =
+    snippets =
       paths
       |> Enum.map(fn path ->
         file = File.read!(Path.absname(path, snippet_directory))
@@ -16,8 +16,6 @@ defmodule App do
         snippet_data
         |> Map.put(:description, "prefixes: #{snippet_data.prefix |> Enum.join(",")}")
       end)
-      |> Map.new(fn %{name: name} = meta_data -> {name, Map.delete(meta_data, :name)} end)
-      |> Jason.encode!()
 
     doc_table =
       paths
@@ -115,7 +113,20 @@ defmodule App do
 
     File.write("./README.md", docs)
 
-    File.write!("./snippets.json", snippet_json)
+    elixir_snippet_json =
+      snippets
+      |> Enum.filter(&(&1.scope == "elixir"))
+      |> Map.new(fn %{name: name} = meta_data -> {name, Map.delete(meta_data, :name)} end)
+      |> Jason.encode!()
+
+    phoenix_heex_snippet_json =
+      snippets
+      |> Enum.filter(&(&1.scope == "phoenix-heex"))
+      |> Map.new(fn %{name: name} = meta_data -> {name, Map.delete(meta_data, :name)} end)
+      |> Jason.encode!()
+
+    File.write!("./elixir.code-snippets", elixir_snippet_json)
+    File.write!("./phoenix-heex.code-snippets", phoenix_heex_snippet_json)
 
     args
     |> parse_args()
