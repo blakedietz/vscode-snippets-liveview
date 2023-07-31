@@ -101,7 +101,7 @@ defmodule App.Snippets do
     %Snippet{
       name: "LiveView: Phoenix.LiveComponent call",
       scope: "phoenix-heex",
-      prefix: ["plvs", "plc", "plcc"]
+      prefix: ["plvs", "plc", "plcc", "<.", "<.live_component" , "live_component"]
     }
   end
 
