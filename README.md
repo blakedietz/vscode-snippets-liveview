@@ -96,10 +96,10 @@ teach yourself which snippet mnemonics you would prefer to use.
 
 ### Prefixes
 
-```plvs,es,esc```
+<pre>plvs,es,esc</pre>
 
 ### Template
-```
+<pre>
 def changeset(${1:name}, attrs) do
   required_attrs = [$2]
   optional_attrs = [$3]
@@ -109,55 +109,55 @@ def changeset(${1:name}, attrs) do
   |> validate_required(required_attrs)
 end
 
-```
+</pre>
 ## Ecto: Schema changeset optional attrs
 
 ### Prefixes
 
-```plvs,es,esoa```
+<pre>plvs,es,esoa</pre>
 
 ### Template
-```
+<pre>
 optional_attrs = [$0]
-```
+</pre>
 ## Ecto: Schema changeset required attrs
 
 ### Prefixes
 
-```plvs,es,escra```
+<pre>plvs,es,escra</pre>
 
 ### Template
-```
+<pre>
 required_attrs = [$0]
-```
+</pre>
 ## LiveView: @impl Phoenix.LiveComponent
 
 ### Prefixes
 
-```plvs,plv,@impl```
+<pre>plvs,plv,@impl</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
-```
+</pre>
 ## LiveView: @impl Phoenix.LiveView
 
 ### Prefixes
 
-```plvs,plv,@impl```
+<pre>plvs,plv,@impl</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
-```
+</pre>
 ## LiveView: New LiveView module
 
 ### Prefixes
 
-```plvs,plv,plvnlvm,defmodule```
+<pre>plvs,plv,plvnlvm,defmodule</pre>
 
 ### Template
-```
+<pre>
 defmodule $1 do
   use $2, :live_view
 
@@ -174,87 +174,87 @@ defmodule $1 do
     {:ok, socket}
   end
 end
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent assign helper
 
 ### Prefixes
 
-```plvs,plc,plca,plcah```
+<pre>plvs,plc,plca,plcah</pre>
 
 ### Template
-```
+<pre>
 def assign_$1(socket, $1) do
   assign(socket, $1: $1)
 end
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent call
 
 ### Prefixes
 
-```plvs,plc,plcc```
+<pre>plvs,plc,plcc</pre>
 
 ### Template
-```
+<pre>
 <.live_component
   module={$1}
   id={$2}
   $0
 />
 
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent handle_event
 
 ### Prefixes
 
-```plvs,plc,plche```
+<pre>plvs,plc,plche</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
 def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
   $0
 
   ${4:{:noreply, socket}}
 end
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent mount
 
 ### Prefixes
 
-```plvs,plc,plcm```
+<pre>plvs,plc,plcm</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
 def mount(${1:socket}) do
   $0
   {:ok, ${2:socket}}
 end
 
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent preload
 
 ### Prefixes
 
-```plvs,plc,plcp```
+<pre>plvs,plc,plcp</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
 def preload(${1:list_of_assigns}) do
   $0
   $1
 end
 
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent render
 
 ### Prefixes
 
-```plvs,plc,plcr```
+<pre>plvs,plc,plcr</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
 def render(${1:assigns}) do
   ~H"""
@@ -262,54 +262,54 @@ def render(${1:assigns}) do
   """
 end
 
-```
+</pre>
 ## LiveView: Phoenix.LiveComponent update
 
 ### Prefixes
 
-```plvs,plc,plcu```
+<pre>plvs,plc,plcu</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveComponent
 def update(${1:assigns}, ${2:socket}) do
   $0
 
   {:ok, socket}
 end
-```
+</pre>
 ## LiveView: Phoenix.LiveView mount
 
 ### Prefixes
 
-```plvs,plv,plvm,def mount```
+<pre>plvs,plv,plvm,def mount</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def mount(${1:params}, ${2:session}, ${3:socket}) do
   ${4:{:noreply, socket}}
 end
 
-```
+</pre>
 ## LiveView: Render slot
 
 ### Prefixes
 
-```plvs,plvrs```
+<pre>plvs,plvrs</pre>
 
 ### Template
-```
+<pre>
 <%= render_slot(${1:@inner_block}) %>
-```
+</pre>
 ## LiveView: handle_call
 
 ### Prefixes
 
-```plvs,plv,plvhc,plvhcl,def,def handle_call```
+<pre>plvs,plv,plvhc,plvhcl,def,def handle_call</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def handle_call(${1:msg}, ${2:from}, ${3:socket}) do
   $0
@@ -317,15 +317,15 @@ def handle_call(${1:msg}, ${2:from}, ${3:socket}) do
   ${4:{:noreply, socket}}
 end
 
-```
+</pre>
 ## LiveView: handle_cast
 
 ### Prefixes
 
-```plvs,plv,plvhc,plvhcs,def,def handle_cast```
+<pre>plvs,plv,plvhc,plvhcs,def,def handle_cast</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def handle_cast(${1:msg}, ${2:socket}) do
   $0
@@ -333,15 +333,15 @@ def handle_cast(${1:msg}, ${2:socket}) do
   ${3:{:noreply, socket}}
 end
 
-```
+</pre>
 ## LiveView: handle_event
 
 ### Prefixes
 
-```plvs,plv,plvhe,def,def handle_event```
+<pre>plvs,plv,plvhe,def,def handle_event</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
   $0
@@ -349,30 +349,30 @@ def handle_event(${1:event}, ${2:unsigned_params}, ${3:socket}) do
   ${4:{:noreply, socket}}
 end
 
-```
+</pre>
 ## LiveView: handle_info
 
 ### Prefixes
 
-```plvs,plv,plvhi,def,def handle_info```
+<pre>plvs,plv,plvhi,def,def handle_info</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def handle_info(${1:message}, ${2:socket}) do
   $0
 
   {:noreply, ${3:socket}}
 end
-```
+</pre>
 ## LiveView: handle_params
 
 ### Prefixes
 
-```plvs,plv,plvhp,def,def handle_params```
+<pre>plvs,plv,plvhp,def,def handle_params</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def handle_params(${1:unsigned_params}, ${2:uri}, ${3:socket}) do
   $0
@@ -380,15 +380,15 @@ def handle_params(${1:unsigned_params}, ${2:uri}, ${3:socket}) do
   ${4:{:noreply, socket}}
 end
 
-```
+</pre>
 ## LiveView: render implementation
 
 ### Prefixes
 
-```plvs,plv,plvr,def render```
+<pre>plvs,plv,plvr,def render</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def render(${1:assigns}) do
   ~H"""
@@ -396,145 +396,145 @@ def render(${1:assigns}) do
   """
 end
 
-```
+</pre>
 ## LiveView: socket destructure
 
 ### Prefixes
 
-```plvs,plv,plvsd,socket```
+<pre>plvs,plv,plvsd,socket</pre>
 
 ### Template
-```
+<pre>
 %{ assigns: %{$1} } = $0
-```
+</pre>
 ## LiveView: terminate
 
 ### Prefixes
 
-```plvs,plv,plvt,def terminate```
+<pre>plvs,plv,plvt,def terminate</pre>
 
 ### Template
-```
+<pre>
 @impl Phoenix.LiveView
 def terminate(${1: reason}, ${2:socket}) do
   $3
 end
 
-```
+</pre>
 ## Phoenix: Component Macros attr/3
 
 ### Prefixes
 
-```plvs,pc,pcm,pcma,attr```
+<pre>plvs,pc,pcm,pcma,attr</pre>
 
 ### Template
-```
+<pre>
 attr :$1, :$2, required: $3$0
 
-```
+</pre>
 ## Phoenix: Component Macros embed_templates/2
 
 ### Prefixes
 
-```plvs,pc,pcm,pcme,pcmet,embed_```
+<pre>plvs,pc,pcm,pcme,pcmet,embed_</pre>
 
 ### Template
-```
+<pre>
 embed_templates "$1"
 
-```
+</pre>
 ## Phoenix: Component Macros sigil_H/2
 
 ### Prefixes
 
-```plvs,pc,pcm,pcms,pcmsh,~H```
+<pre>plvs,pc,pcm,pcms,pcmsh,~H</pre>
 
 ### Template
-```
+<pre>
 ~H"""
 $0
 """
 
-```
+</pre>
 ## Phoenix: Component Macros slot/2
 
 ### Prefixes
 
-```plvs,pc,pcm,pcms,slot```
+<pre>plvs,pc,pcm,pcms,slot</pre>
 
 ### Template
-```
+<pre>
 slot :${1:name}, required: $2
 
-```
+</pre>
 ## Phoenix: Component assign/2
 
 ### Prefixes
 
-```plvs,pc,pca,a,assign```
+<pre>plvs,pc,pca,a,assign</pre>
 
 ### Template
-```
+<pre>
 assign(${1:socket_or_assigns}, $2: $3)$0
 
-```
+</pre>
 ## Phoenix: Component assign_new/3
 
 ### Prefixes
 
-```plvs,pc,pca,pcan,a,assign,assign_new```
+<pre>plvs,pc,pca,pcan,a,assign,assign_new</pre>
 
 ### Template
-```
+<pre>
 assign_new(${1:socket_or_assigns}, :${2:key}, ${3:fn %{$4} = assigns ->
   $0
 end})
 
-```
+</pre>
 ## Phoenix: Component assigns_to_attributes/2
 
 ### Prefixes
 
-```plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes```
+<pre>plvs,pc,pca,pcat,pcata,a,assigns,assigns_to_attributes</pre>
 
 ### Template
-```
+<pre>
 assigns_to_attributes(${1:assigns}, ${2:[]})$0
 
-```
+</pre>
 ## Phoenix: Component changed?/2
 
 ### Prefixes
 
-```plvs,pc,pcc,c,changed?```
+<pre>plvs,pc,pcc,c,changed?</pre>
 
 ### Template
-```
+<pre>
 changed?(${1:socket_or_assigns}, :$2)$0
 
-```
+</pre>
 ## Phoenix: Component definition
 
 ### Prefixes
 
-```plvs,pc,pcd```
+<pre>plvs,pc,pcd</pre>
 
 ### Template
-```
+<pre>
 def ${1:component}(${2:assigns}) do
   ~H"""
   $3
   """
 end
-```
+</pre>
 ## Phoenix: Context change
 
 ### Prefixes
 
-```plvs,pctx,pctxch```
+<pre>plvs,pctx,pctxch</pre>
 
 ### Template
-```
+<pre>
 @doc """
 Returns an `%Ecto.Changeset{}` for tracking ${1/(.*)/${1:/pascalcase}/} changes.
 
@@ -548,15 +548,15 @@ def change_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs \\\\ %{} ) do
   ${1/(.*)/${1:/pascalcase}/}.changeset($1, attrs)
 end
 
-```
+</pre>
 ## Phoenix: Context create
 
 ### Prefixes
 
-```plvs,pctx,pctxcr```
+<pre>plvs,pctx,pctxcr</pre>
 
 ### Template
-```
+<pre>
 @doc """
 Creates a ${1/(.*)/${1:/pascalcase}/}.
 
@@ -575,15 +575,15 @@ def create_${1:name}(attrs \\\\ %{}) do
   |> Repo.insert()
 end
 
-```
+</pre>
 ## Phoenix: Context delete
 
 ### Prefixes
 
-```plvs,pctx,pctxd```
+<pre>plvs,pctx,pctxd</pre>
 
 ### Template
-```
+<pre>
 @doc """
   Deletes a ${1/(.*)/${1:/pascalcase}/}.
 
@@ -599,15 +599,15 @@ def delete_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1) do
   Repo.delete($1)
 end
 
-```
+</pre>
 ## Phoenix: Context get
 
 ### Prefixes
 
-```plvs,pctx,pctxg```
+<pre>plvs,pctx,pctxg</pre>
 
 ### Template
-```
+<pre>
 @doc """
 Gets a single ${1/(.*)/${1:/pascalcase}/}.
 
@@ -624,15 +624,15 @@ def get_${1:name}!(id) do
   Repo.get!(${1/(.*)/${1:/pascalcase}/}, id)
 end
 
-```
+</pre>
 ## Phoenix: Context list
 
 ### Prefixes
 
-```plvs,pctx,pctxl```
+<pre>plvs,pctx,pctxl</pre>
 
 ### Template
-```
+<pre>
 @doc """
 Returns the list of ${1/(.*)/${1:/pascalcase}/}.
 
@@ -646,15 +646,15 @@ def list_${1:name}s do
   Repo.all(${1/(.*)/${1:/pascalcase}/})
 end
 
-```
+</pre>
 ## Phoenix: Context update
 
 ### Prefixes
 
-```plvs,pctx,pctxu```
+<pre>plvs,pctx,pctxu</pre>
 
 ### Template
-```
+<pre>
 @doc """
 Updates a $1.
 
@@ -673,28 +673,28 @@ def update_${1:name}(%${1/(.*)/${1:/pascalcase}/}{} = $1, attrs) do
   |> Repo.update()
 end
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.dynamic_tag/1
 
 ### Prefixes
 
-```plvs,pc,pcc,pcd,pcdt,<.,<.dynamic_tag,dynamic_tag```
+<pre>plvs,pc,pcc,pcd,pcdt,<.,<.dynamic_tag,dynamic_tag</pre>
 
 ### Template
-```
+<pre>
 <.dynamic_tag name="$1" type="$2">
   $0
 </.dynamic_tag >
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.form/1
 
 ### Prefixes
 
-```plvs,pc,pcf,<.,<.form,form```
+<pre>plvs,pc,pcf,<.,<.form,form</pre>
 
 ### Template
-```
+<pre>
 <.form
   for={${1:@changeset}}
   let={${2:form}}
@@ -704,172 +704,172 @@ end
   $0
 </.form>
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.inputs_for/1
 
 ### Prefixes
 
-```plvs,pc,pci,pcif,<.,<.inputs_for,inputs_for```
+<pre>plvs,pc,pci,pcif,<.,<.inputs_for,inputs_for</pre>
 
 ### Template
-```
+<pre>
 <.inputs_for :let={${1:f_nested}} field={${2:f[:nested]}}>
   $0
 </.inputs_for>
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.intersperse/1
 
 ### Prefixes
 
-```plvs,pc,pci,<.,<.intersperse,intersperse```
+<pre>plvs,pc,pci,<.,<.intersperse,intersperse</pre>
 
 ### Template
-```
+<pre>
 <.intersperse :let={${1:item}} enum={${2:[$3]}}>
   <:separator>
     $0
   </:separator>
 </.intersperse>
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.link/1
 
 ### Prefixes
 
-```plvs,pc,pcl,<.,<.link,link```
+<pre>plvs,pc,pcl,<.,<.link,link</pre>
 
 ### Template
-```
+<pre>
 <.link $1>
   $0
 </.link>
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.live_file_input/1
 
 ### Prefixes
 
-```plvs,pc,pc,pclf,pclfi,<.,<.live_,<.live_file,live_file_input```
+<pre>plvs,pc,pc,pclf,pclfi,<.,<.live_,<.live_file,live_file_input</pre>
 
 ### Template
-```
+<pre>
 <.live_file_input upload={@uploads.$1} />$0
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.live_img_preview/1
 
 ### Prefixes
 
-```plvs,pc,pc,pcli,pclip,<.,<.live_,<.live_img,live_img_preview```
+<pre>plvs,pc,pc,pcli,pclip,<.,<.live_,<.live_img,live_img_preview</pre>
 
 ### Template
-```
+<pre>
 <.live_image_preview entry={$1}$2/>$0
 
-```
+</pre>
 ## Phoenix: Phoenix.Component.live_title/1
 
 ### Prefixes
 
-```plvs,pc,pc,pclt,<.,<.live_,<.live_title,live_title```
+<pre>plvs,pc,pc,pclt,<.,<.live_,<.live_title,live_title</pre>
 
 ### Template
-```
+<pre>
 <.live_title prefix="${1:"My App"}">
   <%= assigns[$2] || "Welcome" %>
 </.live_title>
 
-```
+</pre>
 ## eex: Comment
 
 ### Prefixes
 
-```plvs,eex,eexc,<%#```
+<pre>plvs,eex,eexc,<%#</pre>
 
 ### Template
-```
+<pre>
 <%# $0 %>
-```
+</pre>
 ## eex: Replace with result
 
 ### Prefixes
 
-```plvs,eex,<%=```
+<pre>plvs,eex,<%=</pre>
 
 ### Template
-```
+<pre>
 <%= $0 %>
-```
+</pre>
 ## eex: Return contents
 
 ### Prefixes
 
-```plvs,eex,eexr,<%%```
+<pre>plvs,eex,eexr,<%%</pre>
 
 ### Template
-```
+<pre>
 <%% $0 %>
-```
+</pre>
 ## eex: case
 
 ### Prefixes
 
-```plvs,eex,eexcase,<% case```
+<pre>plvs,eex,eexcase,<% case</pre>
 
 ### Template
-```
+<pre>
 <% case $1 do %>
   <% $2 -> %>
 <% end %>
-```
+</pre>
 ## eex: cond
 
 ### Prefixes
 
-```plvs,eex,eexcond,<% cond```
+<pre>plvs,eex,eexcond,<% cond</pre>
 
 ### Template
-```
+<pre>
 <%= cond do %>
   <% $1 -> %>
     $2
 <% end %>
-```
+</pre>
 ## eex: for
 
 ### Prefixes
 
-```plvs,eex,eexfor,<% for```
+<pre>plvs,eex,eexfor,<% for</pre>
 
 ### Template
-```
+<pre>
 <%= for $2 <- $1 do %>
   $0
 <% end %>
-```
+</pre>
 ## eex: if
 
 ### Prefixes
 
-```plvs,eex,eexif,<% if```
+<pre>plvs,eex,eexif,<% if</pre>
 
 ### Template
-```
+<pre>
 <%= if $1 do %>
   $0
 <% end %>
-```
+</pre>
 ## eex: inline with output
 
 ### Prefixes
 
-```plvs,eex,<%```
+<pre>plvs,eex,<%</pre>
 
 ### Template
-```
+<pre>
 <% $0 %>
-```
+</pre>
 
 
 
