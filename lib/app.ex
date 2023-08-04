@@ -151,12 +151,12 @@ defmodule App do
 
     ### Prefixes
 
-    <pre>#{snippet.prefix |> Enum.join(",")}</pre>
+    `#{snippet.prefix |> Enum.join(",")}`
 
     ### Template
-    <pre>
+    ```
     #{snippet.body}
-    </pre>
+    ```
     """
   end
 

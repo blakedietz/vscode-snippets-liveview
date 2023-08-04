@@ -1,0 +1,3 @@
+<.focus_wrap id="$1" $2>
+  $0
+<./focus_wrap>

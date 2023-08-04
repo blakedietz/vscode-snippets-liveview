@@ -297,6 +297,14 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("phoenix_component_focus_wrap") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.focus_wrap/1",
+      scope: "phoenix-heex",
+      prefix: ["plvs", "pc", "pcc", "pcf", "pcfw", "<.", "<.focus_wrap", "focus_wrap"]
+    }
+  end
+
   def generate("phoenix_component_form") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.form/1",
@@ -365,6 +373,24 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("phoenix_component_live_render") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.live_render/3",
+      scope: "phoenix-heex",
+      prefix: [
+        "plvs",
+        "pc",
+        "pc",
+        "pclr",
+        "<",
+        "<%",
+        "<%=",
+        "<%= live_render",
+        "live_render"
+      ]
+    }
+  end
+
   def generate("phoenix_component_live_title") do
     %Snippet{
       name: "Phoenix: Phoenix.Component.live_title/1",
@@ -411,6 +437,25 @@ defmodule App.Snippets do
       name: "Phoenix: Component Macros slot/2",
       scope: "elixir",
       prefix: ["plvs", "pc", "pcm", "pcms", "slot"]
+    }
+  end
+
+  def generate("phoenix_component_render_slot") do
+    %Snippet{
+      name: "Phoenix: Phoenix.Component.render_slot/2",
+      scope: "phoenix-heex",
+      prefix: [
+        "plvs",
+        "pc",
+        "pc",
+        "pcr",
+        "pcrs",
+        "<",
+        "<%",
+        "<%=",
+        "<%= render_slot",
+        "render_slot"
+      ]
     }
   end
 
