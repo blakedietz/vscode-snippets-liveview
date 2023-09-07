@@ -74,13 +74,16 @@ teach yourself which snippet mnemonics you would prefer to use.
 | Phoenix: Context list | plvs,pctx,pctxl | [Reference](#phoenix-context-list) |
 | Phoenix: Context update | plvs,pctx,pctxu | [Reference](#phoenix-context-update) |
 | Phoenix: Phoenix.Component.dynamic_tag/1 | plvs,pc,pcc,pcd,pcdt,<.,<.dynamic_tag,dynamic_tag | [Reference](#phoenix-phoenix.component.dynamic_tag/1) |
+| Phoenix: Phoenix.Component.focus_wrap/1 | plvs,pc,pcc,pcf,pcfw,<.,<.focus_wrap,focus_wrap | [Reference](#phoenix-phoenix.component.focus_wrap/1) |
 | Phoenix: Phoenix.Component.form/1 | plvs,pc,pcf,<.,<.form,form | [Reference](#phoenix-phoenix.component.form/1) |
 | Phoenix: Phoenix.Component.inputs_for/1 | plvs,pc,pci,pcif,<.,<.inputs_for,inputs_for | [Reference](#phoenix-phoenix.component.inputs_for/1) |
 | Phoenix: Phoenix.Component.intersperse/1 | plvs,pc,pci,<.,<.intersperse,intersperse | [Reference](#phoenix-phoenix.component.intersperse/1) |
 | Phoenix: Phoenix.Component.link/1 | plvs,pc,pcl,<.,<.link,link | [Reference](#phoenix-phoenix.component.link/1) |
 | Phoenix: Phoenix.Component.live_file_input/1 | plvs,pc,pc,pclf,pclfi,<.,<.live_,<.live_file,live_file_input | [Reference](#phoenix-phoenix.component.live_file_input/1) |
 | Phoenix: Phoenix.Component.live_img_preview/1 | plvs,pc,pc,pcli,pclip,<.,<.live_,<.live_img,live_img_preview | [Reference](#phoenix-phoenix.component.live_img_preview/1) |
+| Phoenix: Phoenix.Component.live_render/3 | plvs,pc,pc,pclr,<,<%,<%=,<%= live_render,live_render | [Reference](#phoenix-phoenix.component.live_render/3) |
 | Phoenix: Phoenix.Component.live_title/1 | plvs,pc,pc,pclt,<.,<.live_,<.live_title,live_title | [Reference](#phoenix-phoenix.component.live_title/1) |
+| Phoenix: Phoenix.Component.render_slot/2 | plvs,pc,pc,pcr,pcrs,<,<%,<%=,<%= render_slot,render_slot | [Reference](#phoenix-phoenix.component.render_slot/2) |
 | eex: Comment | plvs,eex,eexc,<%# | [Reference](#eex-comment) |
 | eex: Replace with result | plvs,eex,<%= | [Reference](#eex-replace-with-result) |
 | eex: Return contents | plvs,eex,eexr,<%% | [Reference](#eex-return-contents) |
@@ -687,6 +690,19 @@ end
 </.dynamic_tag >
 
 ```
+## Phoenix: Phoenix.Component.focus_wrap/1
+
+### Prefixes
+
+`plvs,pc,pcc,pcf,pcfw,<.,<.focus_wrap,focus_wrap`
+
+### Template
+```
+<.focus_wrap id="$1" $2>
+  $0
+<./focus_wrap>
+
+```
 ## Phoenix: Phoenix.Component.form/1
 
 ### Prefixes
@@ -768,6 +784,17 @@ end
 <.live_image_preview entry={$1}$2/>$0
 
 ```
+## Phoenix: Phoenix.Component.live_render/3
+
+### Prefixes
+
+`plvs,pc,pc,pclr,<,<%,<%=,<%= live_render,live_render`
+
+### Template
+```
+<%= live_render($1, $2, $3) %>
+
+```
 ## Phoenix: Phoenix.Component.live_title/1
 
 ### Prefixes
@@ -779,6 +806,17 @@ end
 <.live_title prefix="${1:"My App"}">
   <%= assigns[$2] || "Welcome" %>
 </.live_title>
+
+```
+## Phoenix: Phoenix.Component.render_slot/2
+
+### Prefixes
+
+`plvs,pc,pc,pcr,pcrs,<,<%,<%=,<%= render_slot,render_slot`
+
+### Template
+```
+<%= render_slot(${1:slot}, ${2:argument}) %>
 
 ```
 ## eex: Comment

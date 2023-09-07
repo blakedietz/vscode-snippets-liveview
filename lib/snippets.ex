@@ -1,6 +1,21 @@
 defmodule App.Snippets do
   alias __MODULE__.Snippet
 
+  def create_vscode_snippets(paths, snippet_directory) do
+    paths
+    |> Enum.map(fn path ->
+      file = File.read!(Path.absname(path, snippet_directory))
+      snippet = file |> String.split("\n")
+
+      snippet_data =
+        __MODULE__.generate(path)
+        |> Map.put(:body, snippet)
+
+      snippet_data
+      |> Map.put(:description, "prefixes: #{snippet_data.prefix |> Enum.join(",")}")
+    end)
+  end
+
   def generate("ecto_changeset") do
     %Snippet{
       name: "Ecto: Schema changeset",
