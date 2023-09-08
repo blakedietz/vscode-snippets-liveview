@@ -40,6 +40,25 @@ defmodule App.Documentation do
       - Context
       - Component
 
+    ## neovim compatibility
+
+    ### LazyVim
+
+    Assuming you've already installed LuaSnip
+
+    ```lua
+    return {
+      "L3MON4D3/LuaSnip",
+      opts = function()
+        -- Not actually running anything that modifies the snippet options, primarily just trying to configure
+        -- snippets to be loaded
+        require("luasnip.loaders.from_vscode").lazy_load({
+          paths = { "/Users/blakedietz/projects/blakedietz/vscode-snippets-liveview/build/neovim" },
+        })
+      end,
+    }
+    ```
+
     ## Getting started
 
     ### Not sure where to start?
