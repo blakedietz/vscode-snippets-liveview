@@ -51,11 +51,14 @@ defmodule App do
 
     package_json = File.read!("./package.json") |> Jason.decode!()
     vscode_package_json = Jason.encode!(package_json)
+    documentation = App.Documentation.create_documentation(paths, snippet_directory)
 
-    File.mkdir_p!(Path.dirname("./build/vscode/"))
+    File.mkdir_p!(Path.dirname("./build/vscode/images/"))
     File.write!("./build/vscode/elixir.code-snippets", elixir_snippet_json)
     File.write!("./build/vscode/phoenix-heex.code-snippets", phoenix_heex_snippet_json)
     File.write!("./build/vscode/package.json", vscode_package_json)
+    File.write("./build/vscode/README.md", documentation)
+    File.cp_r!("./images", "./build/vscode/images/")
   end
 
   defp build({:build, "neovim"}) do
@@ -80,6 +83,8 @@ defmodule App do
 
     package_json = File.read!("./package.json") |> Jason.decode!()
 
+    # This set of changes is required because of neovim's inability to detect heex that is embedded in
+    # a document.
     %{"contributes" => %{"snippets" => neovim_snippets}} = package_json
 
     neovim_snippets =
@@ -89,9 +94,13 @@ defmodule App do
       update_in(package_json, ["contributes", "snippets"], fn _ -> neovim_snippets end)
       |> Jason.encode!()
 
-    File.mkdir_p!(Path.dirname("./build/neovim/"))
+    documentation = App.Documentation.create_documentation(paths, snippet_directory)
+
+    File.mkdir_p!(Path.dirname("./build/neovim/images/"))
     File.write!("./build/neovim/elixir.code-snippets", elixir_snippet_json)
     File.write!("./build/neovim/phoenix-heex.code-snippets", phoenix_heex_snippet_json)
     File.write!("./build/neovim/package.json", neovim_package_json)
+    File.write("./build/neovim/README.md", documentation)
+    File.cp_r!("./images/", "./build/neovim/images/")
   end
 end

@@ -3,7 +3,7 @@
 ## Description
 
 A well documented set of snippets commonly used when writing LiveView code. The snippets touch on all aspects of development when writing LiveView
-code. Here's a high level list
+code. Here's a high level list:
 
 - Ecto
   - schema
@@ -17,7 +17,7 @@ code. Here's a high level list
 
 ## Getting started
 
-### Not sure where to start
+### Not sure where to start?
 
 All snippets support the prefix `plvs`. So if you don't know where to get started, just type `plvs` and wait for the
 snippet recommendation to come up. From there a browsable list is given to you.
@@ -95,6 +95,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 
 
 # Snippets
+
 ## Ecto: Schema changeset
 
 ### Prefixes
@@ -910,30 +911,18 @@ end
 ```
 
 
-
 # Contributing
 
 ## Generating snippets and documentation
 
-### Update the version
-
-Before generating documentation make sure that the package.json version field is changed to reflect the new semver for the changes.
-
-## Run the build script
-
 ```sh
-mix escript.build;
-./app
+# This generates the README.md and corresponding snippet json.
+make build
 ```
-
-This generates the README.md and corresponding snippet json.
 
 ## Publishing
 
 ```sh
-mix escript.build;
-./app;
-vsce package;
-# Assuming you have the necessary tokens on your dev machine
-vsce publish;
+# assuming you have vsce installed
+make publish
 ```
