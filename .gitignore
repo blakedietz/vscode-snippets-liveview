@@ -26,4 +26,5 @@ liveview_snippets-*.tar
 /tmp/
 
 /build/
-/app/
+
+app
