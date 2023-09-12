@@ -104,6 +104,14 @@ defmodule App.Snippets do
     }
   end
 
+  def generate("heex_comment") do
+    %Snippet{
+      name: "heex: Comment",
+      scope: "phoenix-heex",
+      prefix: ["plvs", "heex", "heexc", "<%!"]
+    }
+  end
+
   def generate("live_component_assign_helper") do
     %Snippet{
       name: "LiveView: Phoenix.LiveComponent assign helper",

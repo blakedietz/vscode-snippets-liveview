@@ -111,6 +111,7 @@ teach yourself which snippet mnemonics you would prefer to use.
 | eex: for | plvs,eex,eexfor,<% for | [Reference](#eex-for) |
 | eex: if | plvs,eex,eexif,<% if | [Reference](#eex-if) |
 | eex: inline with output | plvs,eex,<% | [Reference](#eex-inline-with-output) |
+| heex: Comment | plvs,heex,heexc,<%! | [Reference](#heex-comment) |
 
 
 # Snippets
@@ -927,6 +928,17 @@ end
 ### Template
 ```
 <% $0 %>
+```
+## heex: Comment
+
+### Prefixes
+
+`plvs,heex,heexc,<%!`
+
+### Template
+```
+<%!-- $0 --%>
+
 ```
 
 
