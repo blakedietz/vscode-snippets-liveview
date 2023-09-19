@@ -312,7 +312,7 @@ end
 ```
 @impl Phoenix.LiveView
 def mount(${1:params}, ${2:session}, ${3:socket}) do
-  ${4:{:noreply, socket}}
+  ${4:{:ok, socket}}
 end
 
 ```

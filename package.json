@@ -2,7 +2,7 @@
   "name": "phoenix-liveview-snippets",
   "displayName": "Phoenix LiveView snippets",
   "description": "A well documented set of snippets commonly used when writing LiveView code",
-  "version": "2.7.0",
+  "version": "2.7.1",
   "publisher": "phoenix-liveview-snippets",
   "engines": {
     "vscode": "^1.28.0"
